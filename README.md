@@ -67,28 +67,28 @@ sudo nano /usr/local/bin/humanode_monitor.py
 ```
 
 6- Açtığınız boş script dosyasına aşağıda ki scripti kendi bilgilerinize göre düzenleyip yapıştırınız. Değiştireceğiz kısımlar aşağıda belirtilmiştir.
+```Açıklama:``` Scripte değiştireceğiniz kısımlar sırasıyla, ```YOUR_BOT_TOKEN``` ve ```YOUR_CHAT_ID``` yazan kısımlar. Ekran görüntüsünde de işaretledim. Tırnak işaretlerini  silmeyin.
 
-```Açıklama:``` örnek
-```sudo:``` Dosya, kök dizin altında olduğundan süper kullanıcı yetkisi gerektirir.
-```rm:``` Dosyayı silmek için kullanılan komut.
+![Ekran görüntüsü 2024-11-08 210810](https://github.com/user-attachments/assets/ab04a66a-eef3-4146-b1ea-b52bd6988269)
+
 
 ```Sieve
 import requests
 import subprocess
 import time
 
-BOT_TOKEN = "7558360014:AAEJ2aL56leL5g3PMQ0V_n8WgWeu5PSyVP4"
-CHAT_ID = "1571936947"
+BOT_TOKEN = "YOUR_BOT_TOKEN"
+CHAT_ID = "YOUR_CHAT_ID"
 CHECK_INTERVAL = 60  # Kontrol aralığı (saniye cinsinden)
 RETRY_INTERVAL = 120  # Launcher kapalıyken tekrar mesaj göndermek için bekleme süresi
-LAUNCHER_TIMEOUT = 10  # Subprocess komutları için zaman aşımı
+LAUNCHER_TIMEOUT = 10  
 
-launcher_is_down = False  # Launcher durumu için bir bayrak
-last_message_time = 0  # Son mesaj gönderim zamanı
+launcher_is_down = False  
+last_message_time = 0
 
 def send_telegram_message(message):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-    data = {"chat_id": 1571936947, "text": message}
+    data = {"chat_id": YOUR_CHAT_ID, "text": message}
     try:
         response = requests.post(url, data=data)
         if response.status_code != 200:
@@ -102,25 +102,25 @@ def check_launcher_status():
     global launcher_is_down, last_message_time
     try:
         result = subprocess.run(["pgrep", "-f", "humanode-peer"], capture_output=True, text=True, timeout=LAUNCHER_TIMEOUT)
-        if result.returncode != 0:  # Launcher çalışmıyorsa
+        if result.returncode != 0:
             current_time = time.time()
             if not launcher_is_down or (current_time - last_message_time >= RETRY_INTERVAL):
                 print("Humanode launcher çalışmıyor, Telegram'a mesaj gönderiliyor...")
-                send_telegram_message("🛠️ 62.84.180.46 IP Numaralı, 𝗦𝗛𝗔𝗥𝗢𝗡 (𝗟𝗨𝗜𝗦 𝗔𝗟𝗙𝗥𝗘𝗗𝗢) kullanıcısının kullanıcısının humanode uygulaması çalışmıyor!")
+                send_telegram_message("🛠️ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması çalışmıyor!")
                 last_message_time = current_time
             launcher_is_down = True
         else:
-            if launcher_is_down:  # Eğer daha önce çalışmıyorduysa ve şimdi çalışıyorsa
+            if launcher_is_down:
                 print("Humanode launcher çalışıyor.")
-                send_telegram_message("✅ 62.84.180.46 IP Numaralı, 𝗦𝗛𝗔𝗥𝗢𝗡 (𝗟𝗨𝗜𝗦 𝗔𝗟𝗙𝗥𝗘𝗗𝗢) kullanıcısının kullanıcısının humanode uygulaması çalışmaya başladı!")
+                send_telegram_message("✅ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması çalışmaya başladı!")
                 launcher_is_down = False
     except subprocess.TimeoutExpired:
         print("Launcher kontrolü zaman aşımına uğradı.")
-        send_telegram_message("⚠️ 62.84.180.46 IP Numaralı, 𝗦𝗛𝗔𝗥𝗢𝗡 (𝗟𝗨𝗜𝗦 𝗔𝗟𝗙𝗥𝗘𝗗𝗢) kullanıcısının kullanıcısının humanode uygulaması kontrolü zaman aşımına uğradı!")
+        send_telegram_message("⚠️ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü zaman aşımına uğradı!")
         launcher_is_down = True
     except Exception as e:
         print(f"Launcher kontrolünde bir hata oluştu: {e}")
-        send_telegram_message(f"62.84.180.46 IP Numaralı, 𝗦𝗛𝗔𝗥𝗢𝗡 (𝗟𝗨𝗜𝗦 𝗔𝗟𝗙𝗥𝗘𝗗𝗢) kullanıcısının kullanıcısının humanode uygulaması kontrolü sırasında bir hata oluştu: {e}")
+        send_telegram_message(f"1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü sırasında bir hata oluştu: {e}")
         launcher_is_down = True
     return launcher_is_down
 
@@ -133,14 +133,13 @@ def check_server_connection():
         pass
     return False
 
-# İzlemeye başlama mesajı gönder
-send_telegram_message("🖥️ 62.84.180.46 IP Numaralı, 𝗦𝗛𝗔𝗥𝗢𝗡 (𝗟𝗨𝗜𝗦 𝗔𝗟𝗙𝗥𝗘𝗗𝗢) kullanıcısının sunucu ve humanode uygulaması izlenmeye başlandı...")
+send_telegram_message("🖥️ 1903 IP Numaralı, Test kullanıcısının sunucu ve humanode uygulaması izlenmeye başlandı...")
 
 while True:
-    if not check_server_connection():  # Sunucuya erişilemiyorsa bekler
+    if not check_server_connection():
         time.sleep(CHECK_INTERVAL)
         continue
-    check_launcher_status()  # Sunucu bağlantısı varsa launcher durumunu kontrol et
+    check_launcher_status()
     time.sleep(CHECK_INTERVAL)
 ```
 
