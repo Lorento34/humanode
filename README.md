@@ -90,9 +90,20 @@ sudo nano /etc/systemd/system/humanode_monitor.service
 ```
 
 9- Systemd servis dosyası için açtığınız boş dosyaya aşağıdaki komutları değiştirmeden yapıştırınız. Bu komutlar, scriptin sistem başlatıldığında otomatik olarak başlamasını sağlar.
+```
+[Unit]
+Description=Humanode Launcher İzleme Scripti
+After=network.target
 
-komutlar
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/humanode_monitor.py
+Restart=always
+RestartSec=10
+User=root
 
+[Install]
+WantedBy=multi-user.target
+```
 
 Komutları dosyaya yapıştırıp, ```ctrl + x``` ardından ```y``` basınız sonra ```enter```'e basıp kaydedip çıkınız.
 
