@@ -71,10 +71,78 @@ sudo nano /usr/local/bin/humanode_monitor.py
 ```Açıklama:``` örnek
 ```sudo:``` Dosya, kök dizin altında olduğundan süper kullanıcı yetkisi gerektirir.
 ```rm:``` Dosyayı silmek için kullanılan komut.
-/usr/local/bin/server_monitor.py: Silmek istediğiniz dosyanın tam yolu.
 
-Script 
+```Sieve
+import requests
+import subprocess
+import time
 
+BOT_TOKEN = "7558360014:AAEJ2aL56leL5g3PMQ0V_n8WgWeu5PSyVP4"
+CHAT_ID = "1571936947"
+CHECK_INTERVAL = 60  # Kontrol aralığı (saniye cinsinden)
+RETRY_INTERVAL = 120  # Launcher kapalıyken tekrar mesaj göndermek için bekleme süresi
+LAUNCHER_TIMEOUT = 10  # Subprocess komutları için zaman aşımı
+
+launcher_is_down = False  # Launcher durumu için bir bayrak
+last_message_time = 0  # Son mesaj gönderim zamanı
+
+def send_telegram_message(message):
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    data = {"chat_id": 1571936947, "text": message}
+    try:
+        response = requests.post(url, data=data)
+        if response.status_code != 200:
+            print(f"Mesaj gönderilemedi. Hata kodu: {response.status_code}")
+        else:
+            print("Mesaj gönderildi.")
+    except Exception as e:
+        print(f"Telegram mesajı gönderilemedi: {e}")
+
+def check_launcher_status():
+    global launcher_is_down, last_message_time
+    try:
+        result = subprocess.run(["pgrep", "-f", "humanode-peer"], capture_output=True, text=True, timeout=LAUNCHER_TIMEOUT)
+        if result.returncode != 0:  # Launcher çalışmıyorsa
+            current_time = time.time()
+            if not launcher_is_down or (current_time - last_message_time >= RETRY_INTERVAL):
+                print("Humanode launcher çalışmıyor, Telegram'a mesaj gönderiliyor...")
+                send_telegram_message("🛠️ 62.84.180.46 IP Numaralı, 𝗦𝗛𝗔𝗥𝗢𝗡 (𝗟𝗨𝗜𝗦 𝗔𝗟𝗙𝗥𝗘𝗗𝗢) kullanıcısının kullanıcısının humanode uygulaması çalışmıyor!")
+                last_message_time = current_time
+            launcher_is_down = True
+        else:
+            if launcher_is_down:  # Eğer daha önce çalışmıyorduysa ve şimdi çalışıyorsa
+                print("Humanode launcher çalışıyor.")
+                send_telegram_message("✅ 62.84.180.46 IP Numaralı, 𝗦𝗛𝗔𝗥𝗢𝗡 (𝗟𝗨𝗜𝗦 𝗔𝗟𝗙𝗥𝗘𝗗𝗢) kullanıcısının kullanıcısının humanode uygulaması çalışmaya başladı!")
+                launcher_is_down = False
+    except subprocess.TimeoutExpired:
+        print("Launcher kontrolü zaman aşımına uğradı.")
+        send_telegram_message("⚠️ 62.84.180.46 IP Numaralı, 𝗦𝗛𝗔𝗥𝗢𝗡 (𝗟𝗨𝗜𝗦 𝗔𝗟𝗙𝗥𝗘𝗗𝗢) kullanıcısının kullanıcısının humanode uygulaması kontrolü zaman aşımına uğradı!")
+        launcher_is_down = True
+    except Exception as e:
+        print(f"Launcher kontrolünde bir hata oluştu: {e}")
+        send_telegram_message(f"62.84.180.46 IP Numaralı, 𝗦𝗛𝗔𝗥𝗢𝗡 (𝗟𝗨𝗜𝗦 𝗔𝗟𝗙𝗥𝗘𝗗𝗢) kullanıcısının kullanıcısının humanode uygulaması kontrolü sırasında bir hata oluştu: {e}")
+        launcher_is_down = True
+    return launcher_is_down
+
+def check_server_connection():
+    try:
+        response = requests.get("https://api.telegram.org", timeout=5)
+        if response.status_code == 200:
+            return True
+    except requests.exceptions.RequestException:
+        pass
+    return False
+
+# İzlemeye başlama mesajı gönder
+send_telegram_message("🖥️ 62.84.180.46 IP Numaralı, 𝗦𝗛𝗔𝗥𝗢𝗡 (𝗟𝗨𝗜𝗦 𝗔𝗟𝗙𝗥𝗘𝗗𝗢) kullanıcısının sunucu ve humanode uygulaması izlenmeye başlandı...")
+
+while True:
+    if not check_server_connection():  # Sunucuya erişilemiyorsa bekler
+        time.sleep(CHECK_INTERVAL)
+        continue
+    check_launcher_status()  # Sunucu bağlantısı varsa launcher durumunu kontrol et
+    time.sleep(CHECK_INTERVAL)
+```
 
 Script içinde ki komutları kendi bilgilerinize göre düzenledikten sonra dosyaya yapıştırıp, ```ctrl + x``` ardından ```y``` basınız sonra ```enter```'e basıp kaydedip çıkınız.
 
