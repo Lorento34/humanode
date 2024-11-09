@@ -1,10 +1,10 @@
 
- 
+ ![4q1DV_mC_400x400](https://github.com/user-attachments/assets/d35215a8-2650-42df-857a-a8198260098b)
 
-<b> Bu script birden fazla humanode düğümü (node) çalıştıran ya da tek düğüm çalıştıran ancak tüm gün boyunca ilgilenemeyen kişiler içindir. Humanode son güncelleme sonrasında bazı değişikllere gitti. Humanode uygulamasına (launcher) uzun süre bakılmadığı taktirde ve bu süre içinde uzun süre kapalı konumda olan Humanode uygulaması yüzünden düğüm (node) çok fazla blok kaçırdığı için halı hazırda yapılmış olan selfie'yi sistem otomatik olarak siliyor. Bunun sonucunda 2 haftalık ödül alma şansı kaybediliyor. Bunun önüne geçmek için aşağıda ki scripti kullanabilirsiniz. Scripti kullanmadan önce Telegram üzerinden mesajların size gelmesi için bir bot oluşturmalısınız. 
 
-Bu scriptin özelliğine gelecek olursak şöyle sıralayabiliriz;
+<b> Bu script birden fazla humanode düğümü (node) çalıştıran ya da tek düğüm çalıştıran ancak tüm gün boyunca ilgilenemeyen kişiler içindir. Scripti her sunucu için ayrı ayrı kurmak gerekiyor. Scripti kullanmadan önce Telegram üzerinden mesajların size gelmesi için bir bot oluşturmalısınız. 
 
+<b> Bu scriptin özelliğine gelecek olursak şöyle sıralayabiliriz; </b>
 - Humanode uygulaması kapanırsa telegram üzerinden size bilgilendirme mesajı gönderiyor.
 - Humanode uygulamasını tekrar aktif yaptığınızda da sistem bunu görüp aktif olduğu konusunda telegram üzerinden mesaj gönderiyor.
 - Script servis dosyası olarak çalıştığı için sunucuda ki herhangi bir sorundan dolayı sunucu kapanırsa ya da belli bir süre iletişim kuralamazsa bile sunucu aktif olduktan sonra script çalışmaya devam ediyor. </b>
@@ -68,7 +68,7 @@ sudo nano /usr/local/bin/humanode_monitor.py
 
 6- Açtığınız boş script dosyasına aşağıda ki scripti kendi bilgilerinize göre düzenleyip yapıştırınız. Değiştireceğiz kısımlar aşağıda belirtilmiştir.
 
-<b> Açıklama:</b> Scripte değiştireceğiniz kısımlar sırasıyla, ```YOUR_BOT_TOKEN``` ve ```YOUR_CHAT_ID``` bunun dışında telegram için size gelecek mesajlarıda düzenleyebilirsiniz. Birden fazla sunucu için kullanacaksanız eğer bu scripti o zaman her sucunun selfie yapan kişi farklı olduğu için bir isim ve Ip adresi yazmanız kafa karışıklığını önceyecektir. Ayrıca ekran görüntüsünde de işaretledim değiştireceğiniz yerleri. Tırnak işaretlerini  silmeyin.
+<b> Açıklama: </b> Scripte değiştireceğiniz kısımlar sırasıyla, ```YOUR_BOT_TOKEN``` ve ```YOUR_CHAT_ID``` bunun dışında telegram için size gelecek mesajlarıda düzenleyebilirsiniz. Birden fazla sunucu için kullanacaksanız eğer bu scripti o zaman her sucunun selfie yapan kişi farklı olduğu için bir isim ve Ip adresi yazmanız kafa karışıklığını önceyecektir. Ayrıca ekran görüntüsünde de işaretledim değiştireceğiniz yerleri. Tırnak işaretlerini  silmeyin.
 
 ![Ekran görüntüsü 2024-11-08 210810](https://github.com/user-attachments/assets/ab04a66a-eef3-4146-b1ea-b52bd6988269)
 
