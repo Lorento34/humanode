@@ -14,7 +14,7 @@ Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez
 rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/full
 ```
 
-2- Bu komut ile yedeğin kurulumuna başlayabilirsiniz. Bu yedek sizi 10123906 Bloktan başlatacaktır. Bu arada yedek dosyasının büyüklüğü ve sunucunuzun internet hızına bağlı olarak bekleme süreniz değişkenlik gösterebilir. Ancak unutmayın ki yedek kurulumu tamamlanmadan konsolu kapatmamalısınız.
+2- Bu komut ile yedeğin kurulumuna başlayabilirsiniz. Bu yedek sizi ```10123906. Bloktan``` başlatacaktır. Bu arada yedek dosyasının büyüklüğü ve sunucunuzun internet hızına bağlı olarak bekleme süreniz değişkenlik gösterebilir. Ancak unutmayın ki yedek kurulumu tamamlanmadan konsolu kapatmamalısınız.
 ```
 curl -L http://100.42.185.156/full_snapshot.tar.gz | tar -xz -C /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/
 ```
