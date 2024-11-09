@@ -105,9 +105,9 @@ def check_launcher_status():
         if result.returncode != 0:
             current_time = time.time()
             if not launcher_is_down or (current_time - last_message_time >= RETRY_INTERVAL):
-                print("Humanode launcher çalışmıyor, Telegram'a mesaj gönderiliyor...")             # Bu kısımları kendinize göre düzenleyin
+                print("Humanode launcher çalışmıyor, Telegram'a mesaj gönderiliyor...")             
                 send_telegram_message("🛠️ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması çalışmıyor!")
-                last_message_time = current_time
+                last_message_time = current_time                        # Bu kısımları kendinize göre düzenleyin
             launcher_is_down = True
         else:
             if launcher_is_down:
