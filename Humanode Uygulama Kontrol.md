@@ -37,7 +37,7 @@
 ------
 
 
-# Humanode kontrol scripti
+# Humanode Uygulama Kontrol Scripti
 
 1- Sunucuda ki paket listelerini güncelleyiniz.
 
