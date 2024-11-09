@@ -20,7 +20,7 @@ curl -L http://65.109.97.25/full_snapshot.tar.gz | tar -xz -C /root/.humanode/wo
 ```
 ![Ekran görüntüsü 2024-11-09 052419](https://github.com/user-attachments/assets/977c976e-0454-49b9-8045-22be6a32e5e8)
 
-3- Kurulum tamamlandıktan sonra tekrardan Humanode uygulamasına giriş yapın ve ```start``` butonuna basın. Humanode uygulamasında ki ```Blockchain sync status``` yeşil olana kadar uygulamayı bir kaç kere kapatıp geri açın. İşlemler bu kadar.
+3- Kurulum tamamlandıktan sonra tekrardan Humanode uygulamasına giriş yapın ve ```Start``` butonuna basın. Humanode uygulamasında ki ```Node Validator Key``` yeşil olana kadar uygulamayı bir kaç kere kapatıp geri açın. İşlemler bu kadar.
 
 ![Ekran görüntüsü 2024-11-09 053456](https://github.com/user-attachments/assets/15d1ae14-4eeb-4afc-bf3e-159fb12ec4a1)![gggg](https://github.com/user-attachments/assets/03814192-f9d3-43bc-bd65-47558ad7c4af)
 
