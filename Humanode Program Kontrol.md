@@ -1,7 +1,7 @@
 
 ![Ekran görüntüsü 2024-11-08 213042](https://github.com/user-attachments/assets/9b2192ee-ccda-492f-a311-74402131daed)
 
-<b> Bu script birden fazla Humanode düğümü (node) çalıştıran ya da tek düğüm çalıştıran ancak tüm gün boyunca ilgilenemeyen kişiler içindir. Scripti her sunucu için ayrı ayrı kurmak gerekiyor. Scripti kullanmadan önce Telegram üzerinden mesajların size gelmesi için bir bot oluşturmalısınız. Eğer sunucu kapanırsa ve geri açılmazsa o zaman bu script çalışmamaktadır. Ancak sunucunun çalışmadığını öğrenmek için ise <a href="https://github.com/Lorento34/humanode/blob/main/Humanode%20Sunucu%20Kontrol.md"><b>```Humanode Sunucu Kontrol Scripti```</b></a> kurmanızda fayda var. Bunun nedeni sunucun çalışmadığından haberiniz olursa Humanode uygulamasınında çalışmadığından haberiniz olacaktır. Eğer sunucu tarafında 
+<b> Bu script birden fazla Humanode düğümü (node) çalıştıran ya da tek düğüm çalıştıran ancak tüm gün boyunca ilgilenemeyen kişiler içindir. Scripti her sunucu için ayrı ayrı kurmak gerekiyor. Scripti kullanmadan önce Telegram üzerinden mesajların size gelmesi için bir bot oluşturmalısınız. Eğer sunucu kapanırsa ve geri açılmazsa o zaman bu script çalışmamaktadır. Ancak sunucunun çalışmadığını öğrenmek için ise <a href="https://github.com/Lorento34/humanode/blob/main/Humanode%20Sunucu%20Kontrol.md"><b>```Humanode Sunucu Kontrol Scripti```</b></a> kurmanızda fayda var. Bunun nedeni sunucun çalışmadığından haberiniz olursa Humanode uygulamasınında çalışmadığından haberiniz olacaktır. Eğer sunucu tarafında çözebileceğiz bir problem ise erken müdahale ederek sorununuzu çözebilirsiniz.
 
 <b> Bu scriptin özelliğine gelecek olursak şöyle sıralayabiliriz; </b>
 - Humanode uygulaması kapanırsa telegram üzerinden size bilgilendirme mesajı gönderiyor.
@@ -12,11 +12,11 @@
 
 # Telegram Botu Oluşturma
 
-1- Telegram arama yerine ```@BotFather``` yazın. Bota tıklayıp ve başlata basınız.
+1- Telegram arama yerine ```@BotFather``` yazın. Bota tıklayıp ve başlata basın.
 
 ![Telegram bot 1](https://github.com/user-attachments/assets/0a7899d7-915b-4d6e-a01d-4ce0b743d4ab)
 
-2- Menüye tıklayın ```/newbot``` yazan komuta tıklayınız. Botunuz için bir isim yazıp ve entere basınız. 
+2- Menüye tıklayın ```/newbot``` yazan komuta tıklayınız. Botunuz için bir isim yazıp ve entere basın. 
 
 ![Telegram bot 1](https://github.com/user-attachments/assets/1a0c882f-0387-4f6f-9e67-4690514a5bc0) ![Telegram bot 2](https://github.com/user-attachments/assets/de137183-b8cd-4e42-9aa8-8895a5c79788)
 
@@ -39,18 +39,18 @@
 
 # Humanode Uygulama Kontrol Scripti
 
-1- Sunucuda ki paket listelerini güncelleyiniz.
+1- Sunucuda ki paket listelerini güncelleyin.
 
 ```
 sudo apt update
 ```
 
-2- Sunucuda yüklü paketleri en son sürümlerine yükseltiniz.
+2- Sunucuda yüklü paketleri en son sürümlerine yükseltin.
 ```
 sudo apt upgrade
 ```
 
-3- Python paket yöneticisi Pip'i kurunuz.
+3- Python paket yöneticisi Pip'i kurun.
 ```
 sudo apt install -y python3-pip
 ```
@@ -60,14 +60,14 @@ sudo apt install -y python3-pip
 pip install requests python-telegram-bot
 ```
 
-5- Script dosyası oluşturunuz.
+5- Script dosyası oluşturun.
 ```
 sudo nano /usr/local/bin/humanode_monitor.py
 ```
 
-6- Açtığınız boş script dosyasına aşağıda ki scripti kendi bilgilerinize göre düzenleyip yapıştırınız. Değiştireceğiz kısımlar aşağıda belirtilmiştir.
+6- Açtığınız boş script dosyasına aşağıda ki scripti kendi bilgilerinize göre düzenleyip yapıştırın. Değiştireceğiz kısımlar aşağıda belirtilmiştir.
 
-> <b> Açıklama: </b> Scripte değiştireceğiniz kısımlar sırasıyla, ```YOUR_BOT_TOKEN``` ve ```YOUR_CHAT_ID``` bunun dışında telegram için size gelecek mesajlarıda düzenleyebilirsiniz. Ekran görüntüsünde de işaretledim değiştireceğiniz kısımları. Tırnak işaretlerini  silmeyin.
+> <b> Açıklama: </b> Scripte değiştireceğiniz kısımlar sırasıyla, ```YOUR_BOT_TOKEN``` ve ```YOUR_CHAT_ID``` bunun dışında telegram için size gelecek mesajlarıda kendi zevkinize göre düzenleyin. Ekran görüntüsünde de işaretledim değiştireceğiniz kısımları. Tırnak işaretlerini silmeyin!
 
 ![Ekran görüntüsü 2024-11-08 210810](https://github.com/user-attachments/assets/ab04a66a-eef3-4146-b1ea-b52bd6988269)
 
@@ -143,20 +143,20 @@ while True:
     time.sleep(CHECK_INTERVAL)
 ```
 
-Script içinde ki komutları kendi bilgilerinize göre düzenledikten sonra dosyaya yapıştırıp, ```ctrl + x``` ardından ```y``` basınız sonra ```enter```'e basıp kaydedip çıkınız.
+Script içinde ki komutları kendi bilgilerinize göre düzenledikten sonra komutları terminale yapıştırıp, ```ctrl + x``` ardından ```y``` basın, sonra ```enter```'e basıp kaydedip çıkın.
 
 
-7- Script dosyasını çalıştırılabilir hale getiriniz.
+7- Script dosyasını çalıştırılabilir hale getirin.
 ```
 sudo chmod +x /usr/local/bin/humanode_monitor.py
 ```
 
-8- Scripti bir servis olarak çalıştırmak için bir systemd servis dosyası oluşturmanız gerekmektedir. Bunun için aşağıda ki komut ile boş bir systemd servis dosyası açınız.
+8- Scripti bir servis olarak çalıştırmak için bir systemd servis dosyası oluşturmanız gerekmektedir. Bunun için aşağıda ki komut ile boş bir systemd servis dosyası açın.
 ```
 sudo nano /etc/systemd/system/humanode_monitor.service
 ```
 
-9- Systemd servis dosyası için açtığınız boş dosyaya aşağıdaki komutları değiştirmeden yapıştırınız. Bu komutlar, scriptin sistem başlatıldığında otomatik olarak başlamasını sağlar.
+9- Systemd servis dosyası için açtığınız boş dosyaya aşağıdaki komutları değiştirmeden yapıştırın. Bu komutlar, scriptin sistem başlatıldığında otomatik olarak başlamasını sağlar.
 ```
 [Unit]
 Description=Humanode Launcher İzleme Scripti
@@ -172,10 +172,10 @@ User=root
 WantedBy=multi-user.target
 ```
 
-Komutları dosyaya yapıştırıp, ```ctrl + x``` ardından ```y``` basınız sonra ```enter```'e basıp kaydedip çıkınız.
+Komutları dosyaya yapıştırıp, ```ctrl + x``` ardından ```y``` basın, sonra ```enter```'e basıp kaydedip çıkın.
 
 
-10- Servisi yükleme, etkinleştirme ve başlatma komutları
+10- Servisi yükleme, etkinleştirme ve başlatma komutları.
 ```
 sudo systemctl daemon-reload
 ```
@@ -186,7 +186,7 @@ sudo systemctl enable humanode_monitor.service
 sudo systemctl start humanode_monitor.service
 ```
 
-11- Scriptin durumunu kontrol etmek ve restart atmak için aşağıda ki komutları kullanınız.
+11- Scriptin durumunu kontrol etmek ve restart atmak için aşağıda ki komutları kullanın.
 ```
 sudo systemctl status humanode_monitor.service
 ```
