@@ -34,7 +34,7 @@ sudo nano /usr/local/bin/humanode_monitor.py
 
 6- Açtığınız boş script dosyasına aşağıda ki scripti kendi bilgilerinize göre düzenleyip yapıştırın. Değiştireceğiz kısımlar aşağıda belirtilmiştir.
 
-> <b> Açıklama: </b> Scripte değiştireceğiniz kısımlar sırasıyla, ```YOUR_BOT_TOKEN``` ve ```YOUR_CHAT_ID``` bunun dışında telegram için size gelecek mesajlarıda düzenleyebilirsiniz. Ekran görüntüsünde de işaretledim değiştireceğiniz kısımları. Tırnak işaretlerini  silmeyin.
+> <b> Açıklama: </b> Scripte değiştireceğiniz kısımlar sırasıyla, ```YOUR_BOT_TOKEN``` ve ```YOUR_CHAT_ID``` bunun dışında takip edilmesi gereken IP adreslerini değiştirin. Aşağıda ki IP adresleri örnektir, siz kendi ip adresleri ile değiştireceksiniz. Ekran görüntüsünde de işaretledim değiştireceğiniz kısımları. Tırnak işaretlerini  silmeyin.
 
 ![www](https://github.com/user-attachments/assets/a4278284-8e33-47e2-9051-3d2368238d30)
 
@@ -54,7 +54,6 @@ PING_ATTEMPTS = 3  # Her sunucuya kaç kez ping atılacak
 # İzlenecek sunucuların IP adresleri
 SERVER_IPS = [
 	"149.102.146.13", "84.241.122.185", "100.41.185.170", "89.141.103.82", "149.101.111.11",
-        "109.199.29.150", "185.182.187.103", "84.46.241.207", "61.146.226.48", "38.242.131.71",
         "62.84.181.46", "62.82.180.63", "638.242.241.189", "141.102.138.150", "185.225.166.1"
     
 ]
