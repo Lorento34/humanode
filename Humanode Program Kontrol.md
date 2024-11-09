@@ -1,12 +1,12 @@
 
 ![Ekran görüntüsü 2024-11-08 213042](https://github.com/user-attachments/assets/9b2192ee-ccda-492f-a311-74402131daed)
 
-<b> Bu script birden fazla humanode düğümü (node) çalıştıran ya da tek düğüm çalıştıran ancak tüm gün boyunca ilgilenemeyen kişiler içindir. Scripti her sunucu için ayrı ayrı kurmak gerekiyor. Scripti kullanmadan önce Telegram üzerinden mesajların size gelmesi için bir bot oluşturmalısınız. 
+<b> Bu script birden fazla Humanode düğümü (node) çalıştıran ya da tek düğüm çalıştıran ancak tüm gün boyunca ilgilenemeyen kişiler içindir. Scripti her sunucu için ayrı ayrı kurmak gerekiyor. Scripti kullanmadan önce Telegram üzerinden mesajların size gelmesi için bir bot oluşturmalısınız. Eğer sunucu kapanırsa ve geri açılmazsa o zaman bu script çalışmamaktadır. Ancak sunucunun çalışmadığını öğrenmek için ise <a href="https://github.com/Lorento34/humanode/blob/main/Humanode%20Sunucu%20Kontrol.md"><b>```Humanode Sunucu Kontrol Scripti```</b></a> kurmanızda fayda var.
 
 <b> Bu scriptin özelliğine gelecek olursak şöyle sıralayabiliriz; </b>
 - Humanode uygulaması kapanırsa telegram üzerinden size bilgilendirme mesajı gönderiyor.
-- Humanode uygulamasını tekrar aktif yaptığınızda da sistem bunu görüp aktif olduğu konusunda telegram üzerinden mesaj gönderiyor.
-- Script servis dosyası olarak çalıştığı için sunucuda ki herhangi bir sorundan dolayı sunucu kapanırsa ya da belli bir süre iletişim kuralamazsa bile sunucu aktif olduktan sonra script çalışmaya devam ediyor. </b>
+- Humanode uygulamasını manuel olarak tekrar aktif duruma getirdiğinizde de telegram üzerinden mesaj gönderiyor.
+- Bir problemden dolayı Humanode düğümünün kurulu olduğu sunucu kapandıktan sonra sunucu tekrar aktif olduğunda Humanode uygulaması çalışmayı durduracaktır. Ancak script çalışmaya devam ettiği için ugulamanın çalışmadığını bildiren mesajı gönderecektir. </b>
 
 ------
 
