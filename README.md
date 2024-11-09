@@ -76,40 +76,44 @@ sudo nano /usr/local/bin/humanode_monitor.py
 Script 
 
 
-Script içinde ki komutları kendi bilgilerinize göre düzenledikten sonra dosyaya yapıştırıp, ctrl + x ardından y basınız sonra enter'e basıp kaydedip çıkınız.
+Script içinde ki komutları kendi bilgilerinize göre düzenledikten sonra dosyaya yapıştırıp, ```ctrl + x``` ardından ```y``` basınız sonra ```enter```'e basıp kaydedip çıkınız.
 
 
 7- Script dosyasını çalıştırılabilir hale getiriniz.
-
+```
 sudo chmod +x /usr/local/bin/humanode_monitor.py
-
+```
 
 8- Scripti bir servis olarak çalıştırmak için bir systemd servis dosyası oluşturmanız gerekmektedir. Bunun için aşağıda ki komut ile boş bir systemd servis dosyası açınız.
-
+```
 sudo nano /etc/systemd/system/humanode_monitor.service
-
+```
 
 9- Systemd servis dosyası için açtığınız boş dosyaya aşağıdaki komutları değiştirmeden yapıştırınız. Bu komutlar, scriptin sistem başlatıldığında otomatik olarak başlamasını sağlar.
 
 komutlar
 
 
-Komutları dosyaya yapıştırıp, ctrl + x ardından y basınız sonra enter'e basıp kaydedip çıkınız.
+Komutları dosyaya yapıştırıp, ```ctrl + x``` ardından ```y``` basınız sonra ```enter```'e basıp kaydedip çıkınız.
 
 
 10- Servisi yükleme, etkinleştirme ve başlatma komutları
-
+```
 sudo systemctl daemon-reload
-
+```
+```
 sudo systemctl enable humanode_monitor.service
-
+```
+```
 sudo systemctl start humanode_monitor.service
-
+```
 
 11- Scriptin durumunu kontrol etmek ve restart atmak için aşağıda ki komutları kullanınız.
-
+```
 sudo systemctl status humanode_monitor.service
-
+```
+```
 sudo systemctl restart humanode_monitor.service
+```
 
 
