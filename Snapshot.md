@@ -18,7 +18,6 @@ rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet
 ```
 curl -L http://65.109.97.25/full_snapshot.tar.gz | tar -xz -C /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/
 ```
-![Ekran görüntüsü 2024-11-09 052419](https://github.com/user-attachments/assets/977c976e-0454-49b9-8045-22be6a32e5e8)
 
 3- Kurulum tamamlandıktan sonra tekrardan Humanode uygulamasına giriş yapın ve ```Start``` butonuna basın. Eğer uygulama çalışmazsa o zaman ```Node Validator Key``` yeşil olana kadar uygulamayı bir kaç kere kapatıp geri açın. İşlemler bu kadar.
 
