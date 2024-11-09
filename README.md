@@ -1,6 +1,5 @@
-<p align="center">
- ![4q1DV_mC_400x400](https://github.com/user-attachments/assets/d35215a8-2650-42df-857a-a8198260098b)
-</p>
+
+![Ekran görüntüsü 2024-11-08 213042](https://github.com/user-attachments/assets/9b2192ee-ccda-492f-a311-74402131daed)
 
 <b> Bu script birden fazla humanode düğümü (node) çalıştıran ya da tek düğüm çalıştıran ancak tüm gün boyunca ilgilenemeyen kişiler içindir. Scripti her sunucu için ayrı ayrı kurmak gerekiyor. Scripti kullanmadan önce Telegram üzerinden mesajların size gelmesi için bir bot oluşturmalısınız. 
 
