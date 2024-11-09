@@ -1,6 +1,6 @@
 ![Ekran görüntüsü 2024-11-08 213042](https://github.com/user-attachments/assets/2d6ad775-bc70-4790-8130-70ccfa6851f2)
 
-Humanode uygulamasını kontrol için bu scripti'de kurmalısınız. Bu script sadece sunucuları takip ediyor. Yani sunucu ile bağlantı kurulamazsa ya da sunucu kapanırsa size mesaj gönderiyor telegram üzerinden. Bu scriptin önemi şöyle büyük, eğer sunucu kapanırsa ya da sunucu ile iletişim kesilirse o zaman <a href="https://github.com/Lorento34/humanode/blob/main/Humanode%20Uygulama%20Kontrol.md"><b>```Humanode Uygulama Kontrol scripti```</b></a> çalışmıyor. Bu sefer bu script devreye giriyor ve size mesaj gönderiyor telegram üzerinden. Eğer siz sunucuda ki problemi hemen hızlı bir şekilde çözebiliyorsanız Humanode uygulamasını kontrol etmeniz için size zaman kazandıracaktır.
+Humanode uygulamasını kontrol için bu scripti'de kurmalısınız. Bu script sadece sunucuları takip ediyor. Bu script diğer scripte göre tek bir sunucuya kurmanız yeterlidir. Yani sunucu ile bağlantı kurulamazsa ya da sunucu kapanırsa size mesaj gönderiyor telegram üzerinden. Bu scriptin önemi şöyle büyük, eğer sunucu kapanırsa ya da sunucu ile iletişim kesilirse o zaman <a href="https://github.com/Lorento34/humanode/blob/main/Humanode%20Uygulama%20Kontrol.md"><b>```Humanode Uygulama Kontrol scripti```</b></a> çalışmıyor. Bu sefer bu script devreye giriyor ve size mesaj gönderiyor telegram üzerinden. Eğer siz sunucuda ki problemi hemen hızlı bir şekilde çözebiliyorsanız Humanode uygulamasını kontrol etmeniz için size zaman kazandıracaktır.
 
 Bu script için Telegram botunu kullanmanız gerekiyor. Ancak <a href="https://github.com/Lorento34/humanode/blob/main/Humanode%20Uygulama%20Kontrol.md"><b>```Humanode Uygulama Kontrol scripti```</b></a> için oluşturduğunuz Telegram botunu kullanabilirsiniz.
 
@@ -43,21 +43,42 @@ sudo nano /usr/local/bin/humanode_monitor.py
 
 ```Sieve
 import requests
-import subprocess
 import time
+import subprocess
 
-BOT_TOKEN = "YOUR_BOT_TOKEN"
-CHAT_ID = "YOUR_CHAT_ID"
+BOT_TOKEN = "7558360014:AAEJ2aL56leL5g3PMQ0V_n8WgWeu5PSyVP4"
+CHAT_ID = "1571936947"
 CHECK_INTERVAL = 60  # Kontrol aralığı (saniye cinsinden)
-RETRY_INTERVAL = 120  # Launcher kapalıyken tekrar mesaj göndermek için bekleme süresi
-LAUNCHER_TIMEOUT = 10  
+RETRY_INTERVAL = 1200  # Bağlantı yoksa her 20 dakikada bir mesaj gönderme
+PING_ATTEMPTS = 3  # Her sunucuya kaç kez ping atılacak
 
-launcher_is_down = False  
-last_message_time = 0
+# İzlenecek sunucuların IP adresleri (yanlış IP adreslerini buradan kaldırın)
+SERVER_IPS = [
+	"149.102.146.63", "84.247.182.185", "100.42.185.170", "89.147.103.82", "149.102.131.11",
+    "109.199.99.150", "185.182.187.103", "84.46.242.207", "62.146.226.48", "38.242.131.75",
+    "149.102.142.164", "100.42.190.21", "38.242.231.233", "213.199.56.209", "185.202.239.66",
+	"83.171.249.166", "84.46.245.29", "62.146.228.112", "62.146.226.46", "100.42.185.171",
+    "100.42.185.167", "100.42.190.13", "62.146.226.44", "109.199.99.148", "154.12.227.191",
+    "62.84.180.64", "62.146.226.47", "195.26.253.8", "157.173.101.10", "213.199.56.247",
+	"66.94.119.68", "195.26.253.10", "213.199.56.202", "213.199.56.118", "149.102.157.55",
+	"37.60.231.254", "38.242.216.210", "100.42.186.183", "100.42.186.178", "194.163.142.71",
+    "149.102.131.59", "194.163.170.53", "149.102.131.144", "100.42.181.142", "37.60.235.4",
+    "62.84.180.60", "62.84.180.58", "162.84.180.52", "62.84.180.46", "62.84.180.63",
+	"638.242.244.189", "149.102.138.150", "185.215.166.5", "217.76.52.165", "38.242.251.103",
+    "31.220.80.195", "158.220.115.1", "184.174.33.20", "38.242.136.153", "38.242.215.69",
+	"157.173.101.9", "157.173.101.2", "157.173.101.4", "157.173.101.5", "157.173.101.21",
+	"157.173.101.22", "157.173.101.23", "157.173.101.24", "157.173.101.26", "157.173.101.17",
+    "1157.173.101.20", "157.173.100.255", "157.173.101.0", "62.84.180.55", "109.199.99.153",
+    "62.84.180.46", "62.84.180.63", "638.242.244.189", "149.102.138.150", "185.215.166.5"
+    
+]
+
+# Her sunucunun bağlantı durumunu ve son mesaj gönderim zamanını saklayan sözlük
+server_status = {ip: {"down": False, "last_alert_time": 0} for ip in SERVER_IPS}
 
 def send_telegram_message(message):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-    data = {"chat_id": YOUR_CHAT_ID, "text": message}
+    data = {"chat_id": 1571936947, "text": message}
     try:
         response = requests.post(url, data=data)
         if response.status_code != 200:
@@ -67,48 +88,41 @@ def send_telegram_message(message):
     except Exception as e:
         print(f"Telegram mesajı gönderilemedi: {e}")
 
-def check_launcher_status():
-    global launcher_is_down, last_message_time
-    try:
-        result = subprocess.run(["pgrep", "-f", "humanode-peer"], capture_output=True, text=True, timeout=LAUNCHER_TIMEOUT)
-        if result.returncode != 0:
-            current_time = time.time()
-            if not launcher_is_down or (current_time - last_message_time >= RETRY_INTERVAL):
-                print("Humanode launcher çalışmıyor, Telegram'a mesaj gönderiliyor...")             # Bu kısımları kendinize göre düzenleyin
-                send_telegram_message("🛠️ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması çalışmıyor!")
-                last_message_time = current_time
-            launcher_is_down = True
-        else:
-            if launcher_is_down:
-                print("Humanode launcher çalışıyor.")                       # Bu kısımları kendinize göre düzenleyin
-                send_telegram_message("✅ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması çalışmaya başladı!(Bu kısımları kendinize göre düzenleyin)")
-                launcher_is_down = False
-    except subprocess.TimeoutExpired:
-        print("Launcher kontrolü zaman aşımına uğradı.")                    # Bu kısımları kendinize göre düzenleyin
-        send_telegram_message("⚠️ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü zaman aşımına uğradı!(Bu kısımları kendinize göre düzenleyin)")
-        launcher_is_down = True
-    except Exception as e:
-        print(f"Launcher kontrolünde bir hata oluştu: {e}")                 # Bu kısımları kendinize göre düzenleyin
-        send_telegram_message(f"1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü sırasında bir hata oluştu(Bu kısımları kendinize göre düzenleyin): {e}")
-        launcher_is_down = True
-    return launcher_is_down
+def ping_server(ip):
+    """Sunucuya belirli sayıda ping atar ve bağlantı durumunu döndürür."""
+    successful_pings = 0
+    for _ in range(PING_ATTEMPTS):
+        result = subprocess.run(["ping", "-c", "1", ip], capture_output=True)
+        if result.returncode == 0:  # Ping başarılıysa
+            successful_pings += 1
+    return successful_pings > 0  # En az bir ping başarılıysa bağlantı var sayılır
 
-def check_server_connection():
-    try:
-        response = requests.get("https://api.telegram.org", timeout=5)
-        if response.status_code == 200:
-            return True
-    except requests.exceptions.RequestException:
-        pass
-    return False
-                                                                             # Bu kısımları kendinize göre düzenleyin
-send_telegram_message("🖥️ 1903 IP Numaralı, Test kullanıcısının sunucu ve humanode uygulaması izlenmeye başlandı...")
+def check_server_status():
+    current_time = time.time()  # Şu anki zamanı al
+    for ip in SERVER_IPS:
+        try:
+            is_online = ping_server(ip)  # Sunucuya ping atarak bağlantı durumunu kontrol et
+            if not is_online:  # Sunucuya ulaşılamıyorsa
+                if not server_status[ip]["down"] or (current_time - server_status[ip]["last_alert_time"] >= RETRY_INTERVAL):
+                    # İlk kez kapalı duruma geçtiyse veya son uyarıdan sonra 20 dakika geçtiyse
+                    print(f"{ip} sunucusuna ulaşılamıyor, Telegram'a mesaj gönderiliyor...")
+                    send_telegram_message(f"⚠️ {ip} sunucusuna ulaşılamıyor!")
+                    server_status[ip]["down"] = True  # Sunucunun kapalı olduğunu işaretle
+                    server_status[ip]["last_alert_time"] = current_time  # Son uyarı zamanını güncelle
+            else:  # Sunucu tekrar çevrimiçi hale geldiyse
+                if server_status[ip]["down"]:
+                    print(f"{ip} sunucusu yeniden bağlandı.")
+                    send_telegram_message(f"🔄 {ip} sunucusu online oldu.")
+                    server_status[ip]["down"] = False  # Bağlantı sağlandığında durumu sıfırla
+                    server_status[ip]["last_alert_time"] = 0  # Son uyarı zamanını sıfırla
+        except Exception as e:
+            print(f"{ip} sunucu durumu kontrol edilirken hata oluştu: {e}")
+
+# İzlemeye başlama mesajı gönder
+send_telegram_message("🖥️ Sunucu izleme başlatıldı...")
 
 while True:
-    if not check_server_connection():
-        time.sleep(CHECK_INTERVAL)
-        continue
-    check_launcher_status()
+    check_server_status()
     time.sleep(CHECK_INTERVAL)
 ```
 
