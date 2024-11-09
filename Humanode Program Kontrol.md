@@ -67,7 +67,7 @@ sudo nano /usr/local/bin/humanode_monitor.py
 
 6- Açtığınız boş script dosyasına aşağıda ki scripti kendi bilgilerinize göre düzenleyip yapıştırın. Değiştireceğiz kısımlar aşağıda belirtilmiştir.
 
-> <b> Açıklama: </b> Scripte değiştireceğiniz kısımlar sırasıyla, ```YOUR_BOT_TOKEN``` ve ```YOUR_CHAT_ID``` bunun dışında telegram için size gelecek mesajlarıda kendi zevkinize göre düzenleyin. Ekran görüntüsünde de işaretledim değiştireceğiniz kısımları. Tırnak işaretlerini silmeyin!
+> <b> Açıklama: </b> Scripte değiştireceğiniz kısımlar sırasıyla, ```YOUR_BOT_TOKEN``` ve ```YOUR_CHAT_ID``` bunun dışında telegram üzerinden size gelecek mesajlarıda kendi zevkinize göre düzenleyin. Ekran görüntüsünde de işaretledim değiştireceğiniz kısımları. Tırnak işaretlerini silmeyin!
 
 ![Ekran görüntüsü 2024-11-08 210810](https://github.com/user-attachments/assets/ab04a66a-eef3-4146-b1ea-b52bd6988269)
 
@@ -143,7 +143,7 @@ while True:
     time.sleep(CHECK_INTERVAL)
 ```
 
-Script içinde ki komutları kendi bilgilerinize göre düzenledikten sonra komutları terminale yapıştırıp, ```ctrl + x``` ardından ```y``` basın, sonra ```enter```'e basıp kaydedip çıkın.
+Script içinde ki komutları kendi bilgilerinize göre düzenledikten sonra scripti terminale yapıştırıp, ```ctrl + x``` ardından ```y``` basın, sonra ```enter```'e basıp kaydedip çıkın.
 
 
 7- Script dosyasını çalıştırılabilir hale getirin.
