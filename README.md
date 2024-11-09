@@ -1,6 +1,6 @@
-
+<p align="center">
  ![4q1DV_mC_400x400](https://github.com/user-attachments/assets/d35215a8-2650-42df-857a-a8198260098b)
-
+</p>
 
 <b> Bu script birden fazla humanode düğümü (node) çalıştıran ya da tek düğüm çalıştıran ancak tüm gün boyunca ilgilenemeyen kişiler içindir. Scripti her sunucu için ayrı ayrı kurmak gerekiyor. Scripti kullanmadan önce Telegram üzerinden mesajların size gelmesi için bir bot oluşturmalısınız. 
 
@@ -68,7 +68,7 @@ sudo nano /usr/local/bin/humanode_monitor.py
 
 6- Açtığınız boş script dosyasına aşağıda ki scripti kendi bilgilerinize göre düzenleyip yapıştırınız. Değiştireceğiz kısımlar aşağıda belirtilmiştir.
 
-> <b> Açıklama: </b> Scripte değiştireceğiniz kısımlar sırasıyla, ```YOUR_BOT_TOKEN``` ve ```YOUR_CHAT_ID``` bunun dışında telegram için size gelecek mesajlarıda düzenleyebilirsiniz. Birden fazla sunucu için kullanacaksanız eğer bu scripti o zaman her sucunun selfie yapan kişi farklı olduğu için bir isim ve Ip adresi yazmanız kafa karışıklığını önceyecektir. Ayrıca ekran görüntüsünde de işaretledim değiştireceğiniz yerleri. Tırnak işaretlerini  silmeyin.
+> <b> Açıklama: </b> Scripte değiştireceğiniz kısımlar sırasıyla, ```YOUR_BOT_TOKEN``` ve ```YOUR_CHAT_ID``` bunun dışında telegram için size gelecek mesajlarıda düzenleyebilirsiniz. Ekran görüntüsünde de işaretledim değiştireceğiniz kısımları. Tırnak işaretlerini  silmeyin.
 
 ![Ekran görüntüsü 2024-11-08 210810](https://github.com/user-attachments/assets/ab04a66a-eef3-4146-b1ea-b52bd6988269)
 
