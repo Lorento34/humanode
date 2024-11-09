@@ -16,7 +16,7 @@
 
 ![Telegram bot 1](https://github.com/user-attachments/assets/0a7899d7-915b-4d6e-a01d-4ce0b743d4ab)
 
-2- Menüye tıklayın ```/newbot``` yazan komuta tıklayınız. Botunuz için bir isim yazıp ve entere basın. 
+2- Menüye tıklayın ```/newbot``` yazan komuta tıklayın. Botunuz için bir isim yazıp ve entere basın. 
 
 ![Telegram bot 1](https://github.com/user-attachments/assets/1a0c882f-0387-4f6f-9e67-4690514a5bc0) ![Telegram bot 2](https://github.com/user-attachments/assets/de137183-b8cd-4e42-9aa8-8895a5c79788)
 
