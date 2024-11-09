@@ -1,11 +1,15 @@
 ![Ekran görüntüsü 2024-11-08 213042](https://github.com/user-attachments/assets/a500a951-735e-4356-b76a-0ab0fc9b8afb)
 
-Merhaba arkadaşlar. Sizlere en güncel bloğa yakın olacak şekilde haftalık yedek ```(snapshot)``` paylaşımı yapacağım. Bu yedeği yeni düğüm ```(node)``` kurulumu yaparken, düğüm taşıması yaparken ya da sorunlu, çalışmayan bir sunucudan düğümünüzü acil bir şekilde taşımak isterseniz kullanabilirsiniz. 
+<b>
+Merhaba arkadaşlar. Sizlere en güncel bloğa yakın olacak şekilde haftalık yedek ```(snapshot)``` paylaşımı yapacağım. Bu yedeği yeni düğüm ```(node)``` kurulumu yaparken, düğüm taşıması yaparken ya da sorunlu, çalışmayan bir sunucudan düğümünüzü acil bir şekilde taşımak isterseniz kullanabilirsiniz.
+</b>
 
+<b>
 Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez ilk önce düğümünüzü kurun. Humanode uygulamasında ```(launcher)``` log kısmında gidin bir kaç blok geçtikten sonra uygulamada ki ```stop``` butonuna basarak düğümünüzü durdurun. Konsolunuzu açın ve aşağıda ki komutlardan devam edin yedeği kurmaya.
+</b>
+------
 
-
-1- Bu komut ile eski tüm dosyaları silin.
+1- Bu komut ile tüm dosyaları silin.
 ```
 rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/full
 ```
