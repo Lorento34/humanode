@@ -112,15 +112,15 @@ def check_launcher_status():
         else:
             if launcher_is_down:
                 print("Humanode launcher çalışıyor.")                       # Bu kısımları kendinize göre düzenleyin
-                send_telegram_message("✅ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması çalışmaya başladı!(Bu kısımları kendinize göre düzenleyin)")
+                send_telegram_message("✅ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması çalışmaya başladı!")
                 launcher_is_down = False
     except subprocess.TimeoutExpired:
         print("Launcher kontrolü zaman aşımına uğradı.")                    # Bu kısımları kendinize göre düzenleyin
-        send_telegram_message("⚠️ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü zaman aşımına uğradı!(Bu kısımları kendinize göre düzenleyin)")
+        send_telegram_message("⚠️ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü zaman aşımına uğradı!")
         launcher_is_down = True
     except Exception as e:
         print(f"Launcher kontrolünde bir hata oluştu: {e}")                 # Bu kısımları kendinize göre düzenleyin
-        send_telegram_message(f"1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü sırasında bir hata oluştu(Bu kısımları kendinize göre düzenleyin): {e}")
+        send_telegram_message(f"1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü sırasında bir hata oluştu: {e}")
         launcher_is_down = True
     return launcher_is_down
 
