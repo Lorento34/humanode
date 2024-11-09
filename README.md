@@ -29,14 +29,87 @@ Bu scriptin özelliğine gelecek olursak şöyle sıralayabiliriz;
 
 ![Telegram bot 4](https://github.com/user-attachments/assets/d30ac842-6bd6-49ee-97d9-e6a6e7aed637) ![2](https://github.com/user-attachments/assets/c77c8df6-3413-4088-a215-a8464aa6993c)
 
-5- ```https://api.telegram.org/bot{BOT_TOKEN}/getUpdates``` bu siteyi tarayıcınızda açın. ```{BOT_TOKEN}``` yazan yere bot tokeninizi yazacaksınız. Size bir çıktı verecek. Eğer çıktı çıkmazsa o zaman botunuza bir şeyler yazın ya da ```/start``` butonuna basın tekrardan. Aşağıda ki resimde ki gibi çıktı vermesi gerekiyor. İşaretlediğim yerde ```CHAT_ID``` var onu da kaydedin. Bot için yapacaklarınız bu kadar. 
+5- ```https://api.telegram.org/bot{BOT_TOKEN}/getUpdates``` bu siteyi tarayıcınızda açın. ```{BOT_TOKEN}``` yazan yere bot tokeninizi yazacaksınız. Size bir çıktı verecek. Eğer çıktı çıkmazsa o zaman botunuza bir şeyler yazın ya da ```/start``` butonuna basın tekrardan. Aşağıda ki resimde ki gibi çıktı vermesi gerekiyor. Sayfayı yenileyin İşaretlediğim yerde ```CHAT_ID``` var onu da kaydedin. Bot için yapacaklarınız bu kadar. 
 
-```Örnek link: https://api.telegram.org/bot7477914640:AAE3dhSQeiMu46ddPUfyWhakYS8Pg8p15Kc/getUpdates```
+```Örnek link: https://api.telegram.org/bot7477533540:AAgg3dhSQe4M546BJKyufyWhakYS8Pg8p15Kc/getUpdates```
 
 ![5](https://github.com/user-attachments/assets/2bdd475f-f7c0-4751-9d51-8eaf1cbefc04)
 
+------
 
 
+# Humanode kontrol scripti
 
+1- Sunucuda ki paket listelerini güncelleyiniz.
+
+```
+sudo apt update
+```
+
+2- Sunucuda yüklü paketleri en son sürümlerine yükseltiniz.
+```
+sudo apt upgrade
+```
+
+3- Python paket yöneticisi Pip'i kurunuz.
+```
+sudo apt install -y python3-pip
+```
+
+4- Aşağıda ki komut Python için ```requests``` ve ```python-telegram-bot``` kütüphanelerini kurar, bu kütüphaneler Telegram botu ile iletişim ve HTTP istekleri yapmak için gereklidir.
+```
+pip install requests python-telegram-bot
+```
+
+5- Script dosyası oluşturunuz.
+```
+sudo nano /usr/local/bin/humanode_monitor.py
+```
+
+6- Açtığınız boş script dosyasına aşağıda ki scripti kendi bilgilerinize göre düzenleyip yapıştırınız. Değiştireceğiz kısımlar aşağıda belirtilmiştir.
+
+```Açıklama:``` örnek
+```sudo:``` Dosya, kök dizin altında olduğundan süper kullanıcı yetkisi gerektirir.
+```rm:``` Dosyayı silmek için kullanılan komut.
+/usr/local/bin/server_monitor.py: Silmek istediğiniz dosyanın tam yolu.
+
+Script 
+
+
+Script içinde ki komutları kendi bilgilerinize göre düzenledikten sonra dosyaya yapıştırıp, ctrl + x ardından y basınız sonra enter'e basıp kaydedip çıkınız.
+
+
+7- Script dosyasını çalıştırılabilir hale getiriniz.
+
+sudo chmod +x /usr/local/bin/humanode_monitor.py
+
+
+8- Scripti bir servis olarak çalıştırmak için bir systemd servis dosyası oluşturmanız gerekmektedir. Bunun için aşağıda ki komut ile boş bir systemd servis dosyası açınız.
+
+sudo nano /etc/systemd/system/humanode_monitor.service
+
+
+9- Systemd servis dosyası için açtığınız boş dosyaya aşağıdaki komutları değiştirmeden yapıştırınız. Bu komutlar, scriptin sistem başlatıldığında otomatik olarak başlamasını sağlar.
+
+komutlar
+
+
+Komutları dosyaya yapıştırıp, ctrl + x ardından y basınız sonra enter'e basıp kaydedip çıkınız.
+
+
+10- Servisi yükleme, etkinleştirme ve başlatma komutları
+
+sudo systemctl daemon-reload
+
+sudo systemctl enable humanode_monitor.service
+
+sudo systemctl start humanode_monitor.service
+
+
+11- Scriptin durumunu kontrol etmek ve restart atmak için aşağıda ki komutları kullanınız.
+
+sudo systemctl status humanode_monitor.service
+
+sudo systemctl restart humanode_monitor.service
 
 
