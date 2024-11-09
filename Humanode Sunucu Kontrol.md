@@ -4,7 +4,7 @@ Humanode uygulamasını kontrol için bu scripti'de kurmalısınız. Bu script s
 
 
 
-# Humanode Sunucu Kontrol Scripti
+# Humanode Sunucu Kontrol Script Kurulumu
 
 1- Sunucuda ki paket listelerini güncelleyiniz.
 
