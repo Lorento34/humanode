@@ -107,21 +107,21 @@ def check_launcher_status():
             current_time = time.time()
             if not launcher_is_down or (current_time - last_message_time >= RETRY_INTERVAL):
                 print("Humanode launcher çalışmıyor, Telegram'a mesaj gönderiliyor...")
-                send_telegram_message("🛠️ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması çalışmıyor!")
+                send_telegram_message("🛠️ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması çalışmıyor!(Bu kısımları kendinize göre düzenleyin)")
                 last_message_time = current_time
             launcher_is_down = True
         else:
             if launcher_is_down:
                 print("Humanode launcher çalışıyor.")
-                send_telegram_message("✅ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması çalışmaya başladı!")
+                send_telegram_message("✅ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması çalışmaya başladı!(Bu kısımları kendinize göre düzenleyin)")
                 launcher_is_down = False
     except subprocess.TimeoutExpired:
         print("Launcher kontrolü zaman aşımına uğradı.")
-        send_telegram_message("⚠️ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü zaman aşımına uğradı!")
+        send_telegram_message("⚠️ 1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü zaman aşımına uğradı!(Bu kısımları kendinize göre düzenleyin)")
         launcher_is_down = True
     except Exception as e:
         print(f"Launcher kontrolünde bir hata oluştu: {e}")
-        send_telegram_message(f"1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü sırasında bir hata oluştu: {e}")
+        send_telegram_message(f"1903 IP Numaralı, Test kullanıcısının humanode uygulaması kontrolü sırasında bir hata oluştu(Bu kısımları kendinize göre düzenleyin): {e}")
         launcher_is_down = True
     return launcher_is_down
 
@@ -134,7 +134,7 @@ def check_server_connection():
         pass
     return False
 
-send_telegram_message("🖥️ 1903 IP Numaralı, Test kullanıcısının sunucu ve humanode uygulaması izlenmeye başlandı...")
+send_telegram_message("🖥️ 1903 IP Numaralı, Test kullanıcısının sunucu ve humanode uygulaması izlenmeye başlandı...(Bu kısımları kendinize göre düzenleyin)")
 
 while True:
     if not check_server_connection():
