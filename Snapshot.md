@@ -9,6 +9,8 @@ Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez
 </b>
 ------
 
+# Yedek Kurulumu
+
 1- Bu komut ile tüm dosyaları silin.
 ```
 rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/full
