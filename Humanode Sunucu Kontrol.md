@@ -29,7 +29,7 @@ pip install requests python-telegram-bot
 
 5- Script dosyası oluşturun.
 ```
-sudo nano /usr/local/bin/humanode_monitor.py
+sudo nano /usr/local/bin/server_monitor.py
 ```
 
 6- Açtığınız boş script dosyasına aşağıda ki scripti kendi bilgilerinize göre düzenleyip yapıştırın. Değiştireceğiz kısımlar aşağıda belirtilmiştir.
@@ -114,23 +114,26 @@ Script içinde ki komutları kendi bilgilerinize göre düzenledikten sonra scri
 
 
 7- Script dosyasını çalıştırılabilir hale getirin.
-```
-sudo chmod +x /usr/local/bin/humanode_monitor.py
+
+```Sieve
+sudo chmod +x /usr/local/bin/server_monitor.py
 ```
 
 8- Scripti bir servis olarak çalıştırmak için bir systemd servis dosyası oluşturmanız gerekmektedir. Bunun için aşağıda ki komut ile boş bir systemd servis dosyası açın.
-```
-sudo nano /etc/systemd/system/humanode_monitor.service
+
+```Sieve
+sudo nano /etc/systemd/system/server_monitor.service
 ```
 
 9- Systemd servis dosyası için açtığınız boş dosyaya aşağıdaki komutları değiştirmeden yapıştırın. Bu komutlar, scriptin sistem başlatıldığında otomatik olarak başlamasını sağlar.
-```
+
+```Sieve
 [Unit]
-Description=Humanode Launcher İzleme Scripti
+Description=Server Monitoring Script
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /usr/local/bin/humanode_monitor.py
+ExecStart=/usr/bin/python3 /usr/local/bin/server_monitor.py
 Restart=always
 RestartSec=10
 User=root
@@ -143,20 +146,22 @@ Komutları terminale yapıştırıp, ```ctrl + x``` ardından ```y``` basın, so
 
 
 10- Servisi yükleme, etkinleştirme ve başlatma komutları.
-```
+
+```Sieve
 sudo systemctl daemon-reload
 ```
+```Sieve
+sudo systemctl enable server_monitor.service
 ```
-sudo systemctl enable humanode_monitor.service
-```
-```
-sudo systemctl start humanode_monitor.service
+```Sieve
+sudo systemctl start server_monitor.service
 ```
 
 11- Scriptin durumunu kontrol etmek ve restart atmak için aşağıda ki komutları kullanın.
+
+```Sieve
+sudo systemctl status server_monitor.service
 ```
-sudo systemctl status humanode_monitor.service
-```
-```
-sudo systemctl restart humanode_monitor.service
+```Sieve
+sudo systemctl restart server_monitor.service
 ```
