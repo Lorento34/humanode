@@ -17,7 +17,7 @@ rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet
 2- Bu komut ile yedeğin kurulumunu başlatın. Bu yedek sizi ```#10594046. Bloktan``` başlatacaktır. Bu arada yedek dosyasının büyüklüğü ve sunucunuzun internet hızına bağlı olarak bekleme süreniz değişkenlik gösterebilir. Ancak unutmayın ki yedek kurulumu tamamlanmadan terminali kapatmamalısınız.
 
 > [!CAUTION]
-> Yedek ```9.12.2024``` tarihinde güncellenmiştir :bangbang:
+> Humanode yedeği ```9.12.2024``` tarihinde güncellenmiştir :bangbang:
 
 ```
 curl -L http://89.116.25.136/full_snapshot.tar.gz | tar -xz -C /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/
