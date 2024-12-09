@@ -14,7 +14,7 @@ Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez
 rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/full
 ```
 
-2- Bu komut ile yedeğin kurulumunu başlatın. Bu yedek sizi ```#10451809. Bloktan``` başlatacaktır. Bu arada yedek dosyasının büyüklüğü ve sunucunuzun internet hızına bağlı olarak bekleme süreniz değişkenlik gösterebilir. Ancak unutmayın ki yedek kurulumu tamamlanmadan terminali kapatmamalısınız.
+2- Bu komut ile yedeğin kurulumunu başlatın. Bu yedek sizi ```#10594046. Bloktan``` başlatacaktır. Bu arada yedek dosyasının büyüklüğü ve sunucunuzun internet hızına bağlı olarak bekleme süreniz değişkenlik gösterebilir. Ancak unutmayın ki yedek kurulumu tamamlanmadan terminali kapatmamalısınız.
 
 > [!CAUTION]
 > Yedeğin en son alındığı tarih ```9.12.2024```'dür :bangbang:
