@@ -48,3 +48,8 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 
 ---
 
+
+<figure>
+  <img src="https://example.com/image.png" alt="Snapshot Süreci" width="600">
+  <figcaption><i>Bu resim snapshot sürecini göstermektedir.</i></figcaption>
+</figure>
