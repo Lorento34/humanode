@@ -5,18 +5,6 @@ Merhaba arkadaşlar, her Cuma günü yedek ```(snapshot)``` dosyasını güncell
 
 Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez ilk önce düğümünüzü kurun normal bir şekilde. Humanode uygulamasında ```(launcher)``` bulunan ```log``` kısmına gidin. Bir kaç blok geçtikten sonra uygulamada ki ```stop``` butonuna basarak düğümünüzü durdurun. Humanode'nun kurulu olduğu sunucuya giriş yapın terminal üzerinden. Yedek kurulumuna aşağıda ki komutlarla devam edin...
 
-```mermaid
-journey
-    title Bu diagram snapshot sürecini adım adım göstermektedir
-    section Kullanıcı İşlemleri
-      Humanode Uygulamasını Aç: 1
-      Snapshot Komutunu Çalıştır: 3
-      İndirme Sürecini İzle: 4
-    section Sistem İşlemleri
-      Dosyayı Sunucudan İndir: 2
-      Dosyayı Doğrula: 3
-      Snapshot Tamamlandı: 4
-```
 
 ------
 
