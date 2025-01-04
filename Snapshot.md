@@ -41,5 +41,10 @@ graph TD;
     C --> F[Hata: İzin Sorunu];
 
 
-
+```markdown
+| İşlem          | Açıklama                              |
+|----------------|---------------------------------------|
+| Snapshot İndir | Snapshot dosyasını HTTP üzerinden indirir. |
+| Doğrulama      | Dosya bütünlüğünü kontrol eder.       |
+| Uygulama       | Snapshot verilerini uygular.         |
 
