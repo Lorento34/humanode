@@ -53,5 +53,10 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 
 ---
 
+> **Snapshot İndirme Komutu**  
+> Kullanıcıların snapshot dosyasını indirip hedef dizine çıkarması için bu komutu çalıştırması gerekir:
+> ```bash
+> curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/
+> ```
 
 
