@@ -16,7 +16,7 @@ rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet
 
 2- Aşağıda ki komut ile urulumunu başlatın. Bu yedek sizi ```#10953728. bloktan``` başlatacaktır. Bu arada yedek dosyasının büyüklüğü ve sunucunuzun internet hızına bağlı olarak bekleme süreniz değişkenlik gösterebilir. Ancak unutmayın ki yedek kurulumu tamamlanmadan terminali kapatmamalısınız!
 
-> [!CAUTION]
+[!CAUTION]
 > ```03.01.2025``` tarihinde güncellenmiştir :bangbang:
 
 ```Sieve
