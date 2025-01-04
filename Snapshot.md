@@ -48,9 +48,20 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 
 ---
 
-| Alan             | Değer                                                          |
-|-------------------|---------------------------------------------------------------|
-| **Snapshot URL**  | `http://89.116.25.136/03012025/snapshot.tar.gz`               |
-| **Boyut**         | 1.2GB                                                         |
-| **Hedef Dizin**   | `/root/.humanode/workspaces/default/substrate-data/.../db/`   |
-
+<table style="width:100%; border:1px solid black; text-align:center; background: linear-gradient(to right, #FFDDC1, #FFABAB);">
+  <tr style="font-weight:bold;">
+    <th>Öğe</th>
+    <th>Durum</th>
+    <th>Açıklama</th>
+  </tr>
+  <tr>
+    <td>Snapshot</td>
+    <td style="color:green;">Tamamlandı</td>
+    <td>Snapshot başarıyla indirildi.</td>
+  </tr>
+  <tr>
+    <td>Veritabanı</td>
+    <td style="color:red;">Hata</td>
+    <td>Dosya bulunamadı.</td>
+  </tr>
+</table>
