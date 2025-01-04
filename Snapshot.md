@@ -15,10 +15,7 @@ journey
       Dosyayı Doğrula: 3: Sistem
       Snapshot Tamamlandı: 4: Sistem
 ```
-%% Açıklama
-  note right of A
-    Bu diagram snapshot sürecini adım adım göstermektedir.
-  end note
+
 
 
 Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez ilk önce düğümünüzü kurun normal bir şekilde. Humanode uygulamasında ```(launcher)``` bulunan ```log``` kısmına gidin. Bir kaç blok geçtikten sonra uygulamada ki ```stop``` butonuna basarak düğümünüzü durdurun. Humanode'nun kurulu olduğu sunucuya giriş yapın terminal üzerinden. Yedek kurulumuna aşağıda ki komutlarla devam edin...
@@ -51,5 +48,29 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 ![Ekran görüntüsü 2024-11-09 053456](https://github.com/user-attachments/assets/15d1ae14-4eeb-4afc-bf3e-159fb12ec4a1)![gggg](https://github.com/user-attachments/assets/03814192-f9d3-43bc-bd65-47558ad7c4af)
 
 
+
+**Sonuç:**
+1. Diagram yukarıda gösterilir.
+2. Altında *Bu diagram snapshot sürecini adım adım göstermektedir.* açıklaması yer alır.
+
+---
+
+### **2. HTML Kullanarak Alt Not Eklemek**
+Markdown içinde HTML ile diyagramın altına bir açıklama ekleyebilirsiniz:
+
+```html
+<div>
+  <pre>
+```mermaid
+journey
+    title Snapshot Süreci
+    section Kullanıcı İşlemleri
+      Komut Satırını Aç: 1: Kullanıcı
+      Snapshot Komutunu Çalıştır: 2: Kullanıcı
+      İndirme Sürecini İzle: 3: Kullanıcı
+    section Sistem İşlemleri
+      Dosyayı Sunucudan İndir: 2: Sistem
+      Dosyayı Doğrula: 3: Sistem
+      Snapshot Tamamlandı: 4: Sistem
 
 
