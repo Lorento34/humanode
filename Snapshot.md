@@ -33,15 +33,16 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 ![Ekran görüntüsü 2024-11-09 053456](https://github.com/user-attachments/assets/15d1ae14-4eeb-4afc-bf3e-159fb12ec4a1)![gggg](https://github.com/user-attachments/assets/03814192-f9d3-43bc-bd65-47558ad7c4af)
 
 
-```mermaid
 journey
     title Snapshot Süreci
     section Kullanıcı İşlemleri
-      Humanode Uygulamasını Aç: 1: Kullanıcı
-      Terminalde Snapshot Komutlarını Çalıştır: 2: Kullanıcı
-      İndirme Sürecini İzle: 3: Kullanıcı
+      Komut Satırını Aç: 1: 🖥️ Kullanıcı
+        Açıklama: Kullanıcı terminali açar ve gerekli izinlerin olduğundan emin olur.
+      Snapshot Komutunu Çalıştır: 2: ⌨️ Kullanıcı
+      İndirme Sürecini İzle: 3: 🔍 Kullanıcı
     section Sistem İşlemleri
-      Dosyayı Sunucudan İndir: 2: Sistem
-      Dosyayı Doğrula: 3: Sistem
-      Snapshot Tamamlandı: 4: Sistem
+      Dosyayı Sunucudan İndir: 2: 💾 Sistem
+      Dosyayı Doğrula: 3: 🔒 Sistem
+      Snapshot Tamamlandı: 4: ✅ Sistem
+
 
