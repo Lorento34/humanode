@@ -14,7 +14,7 @@ Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez
 rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/full
 ```
 
-2- Aşağıda ki komut ile kurulumu başlatın. Bu yedek sizi ```#10953728. bloktan``` başlatacaktır. 
+2- Aşağıda ki komut ile kurulumu başlatın. Bu yedek sizi <span style="color: red;">#10953728. bloktan</span> başlatacaktır. 
 
 > [!CAUTION] 
 > :loudspeaker: ```03.01.2025``` tarihinde güncellenmiştir.
