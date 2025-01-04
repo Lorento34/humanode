@@ -10,7 +10,7 @@ Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez
 # Yedek Kurulumu
 
 1- Eski düğümün dosyalarını silin.
-```ABAP
+```4D
 rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/full
 ```
 
@@ -19,7 +19,7 @@ rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet
 > [!CAUTION]
 > ```03.01.2025``` tarihinde güncellenmiştir :bangbang:
 
-```AIDL
+```ActionScript
 curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/
 ```
 
