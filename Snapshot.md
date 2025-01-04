@@ -36,13 +36,14 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 journey
     title Snapshot Süreci
     section Kullanıcı İşlemleri
-      Komut Satırını Aç: 1: 🖥️ Kullanıcı
-        Açıklama: Kullanıcı terminali açar ve gerekli izinlerin olduğundan emin olur.
-      Snapshot Komutunu Çalıştır: 2: ⌨️ Kullanıcı
-      İndirme Sürecini İzle: 3: 🔍 Kullanıcı
+      Komut Satırını Aç: 1: Kullanıcı
+      %% Alt açıklama
+      Note right of Kullanıcı: Terminali aç ve gerekli izinleri kontrol et.
+      Snapshot Komutunu Çalıştır: 2: Kullanıcı
+      İndirme Sürecini İzle: 3: Kullanıcı
     section Sistem İşlemleri
-      Dosyayı Sunucudan İndir: 2: 💾 Sistem
-      Dosyayı Doğrula: 3: 🔒 Sistem
-      Snapshot Tamamlandı: 4: ✅ Sistem
+      Dosyayı Sunucudan İndir: 2: Sistem
+      Dosyayı Doğrula: 3: Sistem
+      Snapshot Tamamlandı: 4: Sistem
 
 
