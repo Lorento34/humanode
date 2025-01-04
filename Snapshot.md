@@ -38,7 +38,7 @@ journey
     title Snapshot Süreci
     section Kullanıcı İşlemleri
       Humanode Uygulamasını Aç: 1: Kullanıcı
-      Snapshot Komutunu Çalıştır: 2: Kullanıcı
+      Terminalde Snapshot Komutlarını Çalıştır: 2: Kullanıcı
       İndirme Sürecini İzle: 3: Kullanıcı
     section Sistem İşlemleri
       Dosyayı Sunucudan İndir: 2: Sistem
