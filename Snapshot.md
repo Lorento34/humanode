@@ -51,10 +51,6 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 
 ## Sıkça Sorulan Sorular
 
-1. Snapshot Kurulumu Sonrası Node Çalışmıyor.
-Neden: Eksik dosyalar veya uyumsuz yapılandırma.
-Çözüm: Eksik dosyalar varsa snapshot işlemini tekrar edin
-
 **Soru:** Snapshot indirme sırasında hata alıyorum, ne yapmalıyım?
 
 **Cevap:** İnternet bağlantınızı kontrol edin ve komutları doğru girdiğinizden emin olun. Sorun devam ederse [benimle](https://t.me/FrtKmrc) ile iletişime geçin.
