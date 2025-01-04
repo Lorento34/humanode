@@ -49,6 +49,7 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 ---
 
 
-> **Not:**
-> Bu işlem, mevcut verilerinizi kalıcı olarak silecektir. Devam etmeden önce yedek aldığınızdan emin olun.
+> **Uyarı:**
+> Yanlış bir komut çalıştırmak sisteminizde sorunlara yol açabilir. Lütfen dikkatli olun.
+
 
