@@ -49,7 +49,10 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 ---
 
 
-<figure>
-  <img src="https://example.com/image.png" alt="Snapshot Süreci" width="600">
-  <figcaption><i>Bu resim snapshot sürecini göstermektedir.</i></figcaption>
-</figure>
+## İçindekiler
+- [Giriş](#giriş)
+- [Yedek Kurulumu](#yedek-kurulumu)
+  - [Adım 1: Eski Düğüm Dosyalarını Silme](#adım-1-eski-düğüm-dosyalarını-silme)
+  - [Adım 2: Yeni Snapshot'ı İndirme ve Kurma](#adım-2-yeni-snapshotı-indirme-ve-kurma)
+- [Sıkça Sorulan Sorular](#sıkça-sorulan-sorular)
+- [İletişim](#iletişim)
