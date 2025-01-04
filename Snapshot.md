@@ -35,7 +35,7 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 
 | Tarih       | Snapshot Linki                       | Boyut  |
 |-------------|--------------------------------------|--------|
-| 03-01-2025  | [Download](http://example.com/file)  | 1.2GB  |
-| 01-01-2025  | [Download](http://example.com/file2) | 1.0GB  |
+| 03-01-2025  | ```[Download](http://example.com/file)```  | 1.2GB  |
+| 01-01-2025  | ```[Download](http://example.com/file2)``` | 1.0GB  |
 
 
