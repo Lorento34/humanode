@@ -48,21 +48,3 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 
 ---
 
-<table style="width:100%; border-collapse: collapse; text-align:center; box-shadow: 5px 5px 15px rgba(0,0,0,0.3);">
-  <tr style="background-color:#f2f2f2; font-weight:bold;">
-    <th style="padding:10px; border:1px solid #ddd;">İşlem</th>
-    <th style="padding:10px; border:1px solid #ddd;">Durum</th>
-    <th style="padding:10px; border:1px solid #ddd;">Açıklama</th>
-  </tr>
-  <tr>
-    <td style="padding:10px; border:1px solid #ddd;">Snapshot</td>
-    <td style="padding:10px; border:1px solid #ddd; color:green;">Tamamlandı</td>
-    <td style="padding:10px; border:1px solid #ddd;">Snapshot başarıyla indirildi.</td>
-  </tr>
-  <tr>
-    <td style="padding:10px; border:1px solid #ddd;">Veritabanı</td>
-    <td style="padding:10px; border:1px solid #ddd; color:red;">Hata</td>
-    <td style="padding:10px; border:1px solid #ddd;">Dosya bulunamadı.</td>
-  </tr>
-</table>
-
