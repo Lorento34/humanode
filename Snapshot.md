@@ -20,7 +20,7 @@ journey
 
 ------
 
-# Yedek Kurulum Adımları
+#Yedek Kurulum Adımları
 
 1- Eski düğümün dosyalarını silin.
 ```4D
@@ -51,7 +51,7 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 
 ## İçindekiler
 - [Giriş](#giriş)
-- [Yedek Kurulumu](#yedek-kurulumu)
+- [Yedek Kurulumu](#Yedek Kurulum Adımları)
   - [Adım 1: Eski Düğüm Dosyalarını Silme](#adım-1-eski-düğüm-dosyalarını-silme)
   - [Adım 2: Yeni Snapshot'ı İndirme ve Kurma](#adım-2-yeni-snapshotı-indirme-ve-kurma)
 - [Sıkça Sorulan Sorular](#sıkça-sorulan-sorular)
