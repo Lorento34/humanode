@@ -18,7 +18,6 @@ rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet
 
 > [!CAUTION] 
 > :loudspeaker: ```03.01.2025``` tarihinde güncellenmiştir.
-
 > :warning: Bu arada yedek dosyasının büyüklüğü ve sunucunuzun internet hızına bağlı olarak bekleme süreniz değişkenlik gösterebilir. Ancak unutmayın ki yedek kurulumu tamamlanmadan terminali kapatmamalısınız.
 
 ```Sieve
