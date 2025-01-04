@@ -48,20 +48,21 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 
 ---
 
-<table style="width:100%; border:1px solid black; text-align:center; background: linear-gradient(to right, #FFDDC1, #FFABAB);">
-  <tr style="font-weight:bold;">
-    <th>Öğe</th>
-    <th>Durum</th>
-    <th>Açıklama</th>
+<table style="width:100%; border-collapse: collapse; text-align:center; box-shadow: 5px 5px 15px rgba(0,0,0,0.3);">
+  <tr style="background-color:#f2f2f2; font-weight:bold;">
+    <th style="padding:10px; border:1px solid #ddd;">İşlem</th>
+    <th style="padding:10px; border:1px solid #ddd;">Durum</th>
+    <th style="padding:10px; border:1px solid #ddd;">Açıklama</th>
   </tr>
   <tr>
-    <td>Snapshot</td>
-    <td style="color:green;">Tamamlandı</td>
-    <td>Snapshot başarıyla indirildi.</td>
+    <td style="padding:10px; border:1px solid #ddd;">Snapshot</td>
+    <td style="padding:10px; border:1px solid #ddd; color:green;">Tamamlandı</td>
+    <td style="padding:10px; border:1px solid #ddd;">Snapshot başarıyla indirildi.</td>
   </tr>
   <tr>
-    <td>Veritabanı</td>
-    <td style="color:red;">Hata</td>
-    <td>Dosya bulunamadı.</td>
+    <td style="padding:10px; border:1px solid #ddd;">Veritabanı</td>
+    <td style="padding:10px; border:1px solid #ddd; color:red;">Hata</td>
+    <td style="padding:10px; border:1px solid #ddd;">Dosya bulunamadı.</td>
   </tr>
 </table>
+
