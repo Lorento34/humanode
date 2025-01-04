@@ -38,7 +38,7 @@ graph TD;
     B --> C[Snapshot Doğrulaması Yapılıyor];
     C --> D[Veriler Dizinine Kaydediliyor];
     D --> E[Snapshot Başarılı];
-    C --> F[Hata: İzin Sorunu];
+    C --> F[Hata: İzin Sorunu];```
 
 
 ```markdown
@@ -46,5 +46,5 @@ graph TD;
 |----------------|---------------------------------------|
 | Snapshot İndir | Snapshot dosyasını HTTP üzerinden indirir. |
 | Doğrulama      | Dosya bütünlüğünü kontrol eder.       |
-| Uygulama       | Snapshot verilerini uygular.         |
+| Uygulama       | Snapshot verilerini uygular.         |```
 
