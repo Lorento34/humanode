@@ -45,8 +45,12 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 
 ![Ekran görüntüsü 2024-11-09 053456](https://github.com/user-attachments/assets/15d1ae14-4eeb-4afc-bf3e-159fb12ec4a1)![gggg](https://github.com/user-attachments/assets/03814192-f9d3-43bc-bd65-47558ad7c4af)
 
-
-```bash
-curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/
+{
+  "snapshot": {
+    "url": "http://89.116.25.136/03012025/snapshot.tar.gz",
+    "size": "1.2GB",
+    "destination": "/root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/"
+  }
+}
 
 
