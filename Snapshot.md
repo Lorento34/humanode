@@ -9,7 +9,7 @@ Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez
 journey
     title Bu diagram snapshot sürecini adım adım göstermektedir
     section Kullanıcı İşlemleri
-      Humanode Uygulamasını Aç: 1: Kullanıcı
+      Humanode Uygulamasını Aç: 1
       Snapshot Komutunu Çalıştır: 3: Kullanıcı
       İndirme Sürecini İzle: 4: Kullanıcı
     section Sistem İşlemleri
