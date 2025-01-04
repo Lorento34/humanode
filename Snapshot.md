@@ -20,7 +20,7 @@ journey
 
 ------
 
-#Yedek Kurulum Adımları
+# Yedek Kurulum Adımları
 
 1- Eski düğümün dosyalarını silin.
 ```4D
