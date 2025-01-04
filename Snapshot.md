@@ -10,8 +10,8 @@ journey
     title Bu diagram snapshot sürecini adım adım göstermektedir
     section Kullanıcı İşlemleri
       Humanode Uygulamasını Aç: 1: Kullanıcı
-      Snapshot Komutunu Çalıştır: 2: Kullanıcı
-      İndirme Sürecini İzle: 3: Kullanıcı
+      Snapshot Komutunu Çalıştır: 3: Kullanıcı
+      İndirme Sürecini İzle: 4: Kullanıcı
     section Sistem İşlemleri
       Dosyayı Sunucudan İndir: 2: Sistem
       Dosyayı Doğrula: 3: Sistem
