@@ -14,11 +14,11 @@ journey
       Dosyayı Sunucudan İndir: 2: Sistem
       Dosyayı Doğrula: 3: Sistem
       Snapshot Tamamlandı: 4: Sistem
+```
 %% Açıklama
   note right of A
     Bu diagram snapshot sürecini adım adım göstermektedir.
   end note
-```
 
 
 Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez ilk önce düğümünüzü kurun normal bir şekilde. Humanode uygulamasında ```(launcher)``` bulunan ```log``` kısmına gidin. Bir kaç blok geçtikten sonra uygulamada ki ```stop``` butonuna basarak düğümünüzü durdurun. Humanode'nun kurulu olduğu sunucuya giriş yapın terminal üzerinden. Yedek kurulumuna aşağıda ki komutlarla devam edin...
