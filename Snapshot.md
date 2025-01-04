@@ -10,7 +10,7 @@ Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez
 # Yedek Kurulumu
 
 1- Eski düğümün dosyalarını silin.
-```4D
+```python
 rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/full
 ```
 
