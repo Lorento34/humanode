@@ -61,6 +61,7 @@ Markdown içinde HTML ile diyagramın altına bir açıklama ekleyebilirsiniz:
 ```html
 <div>
   <pre>
+```
 ```mermaid
 journey
     title Snapshot Süreci
