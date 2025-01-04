@@ -1,5 +1,5 @@
 ![Ekran görüntüsü 2024-11-08 213042](https://github.com/user-attachments/assets/a500a951-735e-4356-b76a-0ab0fc9b8afb)
-# Humanode Snapshot Rehberi
+
 
 Merhaba arkadaşlar, her Cuma günü yedek ```(snapshot)``` dosyasını güncelleyeceğim. Bu yedeği, yeni düğüm ```(node)``` kurulumu yaparken, düğüm taşıması yaparken ya da sorunlu, çalışmayan bir sunucudan düğümünüzü acil bir şekilde taşımak isterseniz kullanabilirsiniz. 
 
@@ -20,7 +20,7 @@ journey
 
 ------
 
-# Yedek Kurulumu
+# Yedek Kurulum Adımları
 
 1- Eski düğümün dosyalarını silin.
 ```4D
