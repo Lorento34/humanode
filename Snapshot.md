@@ -49,7 +49,8 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 ---
 
 
-> **Uyarı:**
-> Yanlış bir komut çalıştırmak sisteminizde sorunlara yol açabilir. Lütfen dikkatli olun.
+## Sıkça Sorulan Sorular
 
+**Soru:** Snapshot indirme sırasında hata alıyorum, ne yapmalıyım?
 
+**Cevap:** İnternet bağlantınızı kontrol edin ve komutları doğru girdiğinizden emin olun. Sorun devam ederse [destek ekibi](mailto:support@humanode.io) ile iletişime geçin.
