@@ -48,10 +48,9 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 
 ---
 
-### **10. Daha İyi Okunabilirlik için Emoji Kullanımı**
-```markdown
-📥 **Komut:**  
-```bash
-curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/
-
+| Alan             | Değer                                                          |
+|-------------------|---------------------------------------------------------------|
+| **Snapshot URL**  | `http://89.116.25.136/03012025/snapshot.tar.gz`               |
+| **Boyut**         | 1.2GB                                                         |
+| **Hedef Dizin**   | `/root/.humanode/workspaces/default/substrate-data/.../db/`   |
 
