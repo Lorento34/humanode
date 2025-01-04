@@ -19,7 +19,7 @@ rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet
 > [!CAUTION]
 > ```03.01.2025``` tarihinde güncellenmiştir :bangbang:
 
-```Boo
+```Mask
 curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/
 ```
 
