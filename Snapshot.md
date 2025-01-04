@@ -15,7 +15,7 @@ journey
     section Sistem İşlemleri
       Dosyayı Sunucudan İndir: 2: Sistem
       Dosyayı Doğrula: 3: Sistem
-      Snapshot Tamamlandı: 6: Sistem
+      Snapshot Tamamlandı: 4: Sistem
 ```
 
 ------
