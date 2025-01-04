@@ -5,9 +5,9 @@ Merhaba arkadaşlar, her Cuma günü yedek ```(snapshot)``` dosyasını güncell
 
 ```mermaid
 journey
-    title Snapshot Süreci: *Bu diagram snapshot sürecini adım adım göstermektedir.*
+    title Bu diagram snapshot sürecini adım adım göstermektedir
     section Kullanıcı İşlemleri
-      KHumanode Uygulamasını Aç: 1: Kullanıcı
+      Humanode Uygulamasını Aç: 1: Kullanıcı
       Snapshot Komutunu Çalıştır: 2: Kullanıcı
       İndirme Sürecini İzle: 3: Kullanıcı
     section Sistem İşlemleri
