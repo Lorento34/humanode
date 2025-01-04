@@ -37,7 +37,7 @@ curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humano
 journey
     title Snapshot Süreci
     section Kullanıcı İşlemleri
-      Komut Satırını Aç: 1: Kullanıcı
+      Humanode Uygulamasını Aç: 1: Kullanıcı
       Snapshot Komutunu Çalıştır: 2: Kullanıcı
       İndirme Sürecini İzle: 3: Kullanıcı
     section Sistem İşlemleri
