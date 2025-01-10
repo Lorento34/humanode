@@ -1,7 +1,14 @@
 ![Ekran görüntüsü 2024-11-08 213042](https://github.com/user-attachments/assets/a500a951-735e-4356-b76a-0ab0fc9b8afb)
 
 
-Merhaba arkadaşlar, her Cuma günü yedek ```(snapshot)``` dosyasını güncelleyeceğim. Bu yedeği, yeni düğüm ```(node)``` kurulumu yaparken, düğüm taşıması yaparken ya da sorunlu, çalışmayan bir sunucudan düğümünüzü acil bir şekilde taşımak isterseniz kullanabilirsiniz. 
+🚀 Snapshot Loader Humanode ağı için kolay, hızlı ve güvenli bir şekilde yedek ```(snapshot)``` indirme ve kurulum işlemlerini gerçekleştiren bir bash scriptidir. Bu araç, Humanode düğümünüzü ```(node)``` belirli bir bloktan başlatmanızı sağlar ve kurulum sürecini basitleştirir.
+
+###Özellikler 
+🌟 Kolay Kurulum: Tek bir komutla yedek dosyasını indirin, yükleyin ve düğümünüzü başlatın. 
+📦 Gereksinim Kontrolü: İhtiyaç duyulan tüm bağımlılıkları otomatik kontrol eder ve yükler. 
+⏱️ Modern İlerleme Çubuğu: İndirme hızını, geçen süreyi görselleştirir. 
+🛡️ Güvenilirlik: Özel tasarımıyla Humanode ağı için optimize edilmiştir. 
+🔗 Blok Numarası Belirleme: Snapshot belirli bir bloktan başlatılmak üzere hazırlanır.
 
 Kurulumu çok basit. İster yeni kurulum yapın, ister taşıma yapın farketmez ilk önce düğümünüzü kurun normal bir şekilde. Humanode uygulamasında ```(launcher)``` bulunan ```log``` kısmına gidin. Bir kaç blok geçtikten sonra uygulamada ki ```stop``` butonuna basarak düğümünüzü durdurun. Humanode'nun kurulu olduğu sunucuya giriş yapın terminal üzerinden. Yedek kurulumuna aşağıda ki komutlarla devam edin...
 
