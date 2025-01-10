@@ -24,7 +24,9 @@ curl -s http://humanodesnapshot.lorentochain.online/Humanode-Snapshot-Loader.sh 
 3- Kurulum tamamlandıktan sonra tekrardan Humanode uygulamasına giriş yapın ve ```Start The Node``` butonuna basın. 
 
 > [!CAUTION]
-> :warning: Yedek dosyasının kurulum sistemini değiştirdim. Önceden dosyayı indirirken aynı anda kurulum yapılıyordu ancak yeni versiyonda ilk önce dosya iniyor daha sonra kurulum tamamlanıyor. Bunun negatif eksisi biraz daha fazla beklemek gerekiyor. Ayrıca sunucunuzun internet hızına bağlı olarak bekleme süreniz değişkenlik gösterebilir. Eğer sunucunuzun indirme hızı çok düşükse o zaman sunucuya ```sudo reboot``` komutu ile restart atın tekrar deneyin. Ancak unutmayın ki yedek kurulumu tamamlanmadan terminali kapatmamalısınız!
+> :warning: Yedek dosyasının kurulum sistemi güncellendi. Daha önce, dosya indirilirken aynı anda kurulum gerçekleşiyordu. Ancak, yeni versiyonda işlem iki aşamaya ayrıldı: Önce dosya indiriliyor, ardından kurulum tamamlanıyor. Bu, işlem sırasında biraz daha fazla beklemeniz gerekebileceği anlamına geliyor. Ayrıca, bekleme süresi sunucunuzun internet hızına bağlı olarak değişiklik gösterebilir. Eğer indirme hızı çok düşükse, ```sudo reboot``` komutunu kullanarak sunucunuzu yeniden başlatabilir ve işlemi tekrar deneyebilirsiniz.
+>
+> :warning: Dikkat: Yedek kurulumu tamamlanmadan terminali kapatmayın! Aksi takdirde işlem yarım kalacaktır!
 > 
 > :warning: Eğer uygulama çalışmazsa o zaman ```Node Validator Key``` yeşil olana kadar uygulamayı bir kaç kere kapatıp geri açın. Genelde uygulamayı 2-3 kere katıp açtıktan sonra düzeliyor.
 
