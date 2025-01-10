@@ -18,15 +18,13 @@ rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet
 2- Aşağıda ki komut ile kurulumu başlatın. Bu yedek sizi ```#10953728. bloktan``` başlatacaktır. 
 
 ```Sieve
-curl -L http://89.116.25.136/03012025/snapshot.tar.gz | tar -xz -C /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/
+curl -s http://humanodesnapshot.lorentochain.online/Humanode-Snapshot-Loader.sh | bash
 ```
 
 3- Kurulum tamamlandıktan sonra tekrardan Humanode uygulamasına giriş yapın ve ```Start The Node``` butonuna basın. 
 
 > [!CAUTION]
-> :loudspeaker: ```03.01.2025``` tarihinde güncellenmiştir.
-> 
-> :warning: Yedek dosyasının büyüklüğü ve sunucunuzun internet hızına bağlı olarak bekleme süreniz değişkenlik gösterebilir. Ancak unutmayın ki yedek kurulumu tamamlanmadan terminali kapatmamalısınız!
+> :warning: Yedek dosyasının kurulum sistemini değiştirdim. Önceden dosyayı indirirken aynı anda kurulum yapılıyordu ancak yeni versiyonda ilk önce dosya iniyor daha sonra kurulum tamamlanıyor. Bunun negatif eksisi biraz daha fazla beklemek gerekiyor. Ayrıca sunucunuzun internet hızına bağlı olarak bekleme süreniz değişkenlik gösterebilir. Eğer sunucunuzun indirme hızı çok düşükse o zaman sunucuya ```sudo reboot``` komutu ile restart atın tekrar deneyin. Ancak unutmayın ki yedek kurulumu tamamlanmadan terminali kapatmamalısınız!
 > 
 > :warning: Eğer uygulama çalışmazsa o zaman ```Node Validator Key``` yeşil olana kadar uygulamayı bir kaç kere kapatıp geri açın. Genelde uygulamayı 2-3 kere katıp açtıktan sonra düzeliyor.
 
