@@ -12,6 +12,8 @@
 ### Nasıl Çalışır? 
 İster yeni kurulum yapın, ister taşıma yapın farketmez ilk önce düğümünüzü kurun normal bir şekilde. Humanode uygulamasında ```(launcher)``` bulunan ```log``` kısmına gidin. Bir kaç blok geçtikten sonra uygulamada ki ```stop``` butonuna basarak düğümünüzü durdurun. Humanode'nun kurulu olduğu sunucuya giriş yapın terminal üzerinden. Yedek kurulumuna aşağıda ki komutlarla devam edin...
 
+### Katkı
+Bu projeye katkıda bulunmak isterseniz, lütfen bir pull request gönderin veya bir issue oluşturun.
 
 ------
 
