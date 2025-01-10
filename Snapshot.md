@@ -4,8 +4,8 @@
 🚀 Snapshot Loader Humanode ağı için kolay, hızlı ve güvenli bir şekilde yedek ```(snapshot)``` indirme ve kurulum işlemlerini gerçekleştiren bir bash scriptidir. Bu araç, Humanode düğümünüzü ```(node)``` belirli bir bloktan başlatmanızı sağlar ve kurulum sürecini basitleştirir.
 
 #### Özellikler 
-####🌟 Kolay Kurulum: Tek bir komutla yedek dosyasını indirin, yükleyin ve düğümünüzü başlatın. 
-####📦 Gereksinim Kontrolü: İhtiyaç duyulan tüm bağımlılıkları otomatik kontrol eder ve yükler. 
+🌟 - Kolay Kurulum: Tek bir komutla yedek dosyasını indirin, yükleyin ve düğümünüzü başlatın. 
+📦 - Gereksinim Kontrolü: İhtiyaç duyulan tüm bağımlılıkları otomatik kontrol eder ve yükler. 
 ⏱️ Modern İlerleme Çubuğu: İndirme hızını, geçen süreyi görselleştirir. 
 🛡️ Güvenilirlik: Özel tasarımıyla Humanode ağı için optimize edilmiştir. 
 🔗 Blok Numarası Belirleme: Snapshot belirli bir bloktan başlatılmak üzere hazırlanır.
