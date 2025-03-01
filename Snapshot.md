@@ -36,7 +36,7 @@ curl -s http://humanodesnapshot.lorentochain.online/Humanode-Snapshot-Loader.sh 
 > [!CAUTION]
 > :warning: Dikkat: Yedek kurulumu tamamlanmadan terminali kapatmayın! Aksi takdirde işlem yarım kalacaktır!
 > 
-> :warning: Eğer uygulama çalışmazsa o zaman ```Node Validator Key``` yeşil olana kadar uygulamayı bir kaç kere kapatıp geri açın. Genelde uygulamayı 2-3 kere katıp açtıktan sonra düzeliyor.
+> :warning: Yedeği yükledikten sonra eğer uygulama çalışmazsa o zaman ```Node Validator Key``` yeşil olana kadar uygulamayı bir kaç kere kapatıp geri açın. Genelde uygulamayı 2-3 kere katıp açtıktan sonra düzeliyor.
 
 ![Ekran görüntüsü 2024-11-09 053456](https://github.com/user-attachments/assets/15d1ae14-4eeb-4afc-bf3e-159fb12ec4a1)![gggg](https://github.com/user-attachments/assets/03814192-f9d3-43bc-bd65-47558ad7c4af)
 
