@@ -2,7 +2,7 @@
 
 
 
-🚀 Snapshot Loader Humanode ağı için kolay, hızlı ve güvenli bir şekilde yedek ```(snapshot)``` indirme ve kurulum işlemlerini gerçekleştiren bir bash scriptidir. Bu araç, Humanode düğümünüzü ```(node)``` belirli bir bloktan başlatmanızı sağlar ve kurulum sürecini basitleştirir.
+🚀 Snapshot Loader Humanode ağı için kolay, hızlı ve güvenli bir şekilde yedek ```(snapshot)``` indirme ve kurulum işlemlerini gerçekleştiren bir bash scriptidir. Bu araç, Humanode düğümünüzü ```(node)``` en güncel bloğa yakın olacak şekilde başlatmanızı sağlar ve kurulum sürecini basitleştirir.
 
 ### Özellikler 
 - 🌟 **Kolay Kurulum**: Tek bir komut ile yedek dosyasını indirin, yükleyin ve düğümünüzü başlatın.
@@ -11,10 +11,10 @@
 - 🛡️ **Güvenilirlik**: Özel tasarımıyla Humanode ağı için optimize edilmiştir.
 
 ### Nasıl Çalışır? 
-İster yeni kurulum yapın, ister taşıma yapın farketmez ilk önce düğümünüzü kurun normal bir şekilde. Humanode uygulamasında ```(launcher)``` bulunan ```log``` kısmına gidin. Bir kaç blok geçtikten sonra uygulamada ki ```stop``` butonuna basarak düğümünüzü durdurun. Humanode'nun kurulu olduğu sunucuya giriş yapın terminal üzerinden. Yedek kurulumuna aşağıda ki komutlarla devam edin...
+İster yeni kurulum yapın, ister düğüm taşıması yapın farketmez bu araç tam size göre! ilk önce düğümünüzü kurun normal bir şekilde. Humanode uygulamasında ```(launcher)``` bulunan ```log``` kısmına gidin. Bir kaç blok geçtikten sonra uygulamada ki ```stop``` butonuna basarak düğümünüzü durdurun. Humanode'nun kurulu olduğu sunucuya giriş yapın terminal üzerinden. Yedek kurulumuna aşağıda ki komutlarla devam edin...
 
 ### Katkı
-Bu projeye katkıda bulunmak isterseniz, lütfen bir pull request gönderin veya bir issue oluşturun.
+Bu repoya katkıda bulunmak isterseniz, lütfen bir pull request gönderin veya bir issue oluşturun!
 
 ------
 
@@ -34,8 +34,6 @@ curl -s http://humanodesnapshot.lorentochain.online/Humanode-Snapshot-Loader.sh 
 3- Kurulum tamamlandıktan sonra tekrardan Humanode uygulamasına giriş yapın ve ```Start The Node``` butonuna basın. 
 
 > [!CAUTION]
-> :warning: Yedek dosyasının kurulum sistemi güncellendi. Daha önce, dosya indirilirken aynı anda kurulum gerçekleşiyordu. Ancak, yeni versiyonda işlem iki aşamaya ayrıldı: Önce dosya indiriliyor, ardından kurulum tamamlanıyor. Bu, işlem sırasında biraz daha fazla beklemeniz gerekebileceği anlamına geliyor. Ayrıca, bekleme süresi sunucunuzun internet hızına bağlı olarak değişiklik gösterebilir. Eğer indirme hızı çok düşükse, ```sudo reboot``` komutunu kullanarak sunucunuzu yeniden başlatabilir ve işlemi tekrar deneyebilirsiniz.
->
 > :warning: Dikkat: Yedek kurulumu tamamlanmadan terminali kapatmayın! Aksi takdirde işlem yarım kalacaktır!
 > 
 > :warning: Eğer uygulama çalışmazsa o zaman ```Node Validator Key``` yeşil olana kadar uygulamayı bir kaç kere kapatıp geri açın. Genelde uygulamayı 2-3 kere katıp açtıktan sonra düzeliyor.
