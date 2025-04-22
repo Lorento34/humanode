@@ -26,7 +26,7 @@ rm -rf /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet
 2- Aşağıda ki komut ile kurulumu başlatın.
 
 ```Sieve
-curl -L http://89.116.25.136/06042025/snapshot.tar.gz | tar -xz -C /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/
+curl -L http://89.116.25.136/22042025/snapshot.tar.gz | tar -xz -C /root/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/db/
 ```
 
 3- Kurulum tamamlandıktan sonra tekrardan Humanode uygulamasına giriş yapın ve ```Start The Node``` butonuna basın. 
